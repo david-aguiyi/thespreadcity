@@ -133,7 +133,7 @@ footer .logo .logo-img{height:42px}
 .belief .side-r{text-align:right}
 .belief .center{position:relative;width:100%}
 /* center-emphasized vertical carousel: big active statement, faded neighbours above/below */
-.belief-roller{--slot:clamp(150px,23vh,220px);position:relative;height:calc(var(--slot) * 3);overflow:hidden;
+.belief-roller{--slot:clamp(104px,16vh,150px);position:relative;height:calc(var(--slot) * 3);overflow:hidden;
   -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%,#000 70%,transparent 100%);
           mask-image:linear-gradient(180deg,transparent 0,#000 30%,#000 70%,transparent 100%)}
 .roller-track{position:absolute;left:0;right:0;top:0;margin:0;padding:0;list-style:none;will-change:transform}
@@ -142,7 +142,7 @@ footer .logo .logo-img{height:42px}
 .roller-track li{height:var(--slot);display:flex;align-items:center;justify-content:center;padding:0 12px;
   font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.015em;
   font-size:var(--bfs, clamp(1.9rem,4.6vw,3.9rem));line-height:.94;color:#fff;
-  opacity:.22;transform:scale(.4);transform-origin:center center;
+  opacity:.24;transform:scale(.52);transform-origin:center center;
   transition:opacity .9s var(--ease), transform .9s var(--ease);
   will-change:transform,opacity;backface-visibility:hidden}
 .roller-track li .ln{display:block;text-align:center}
