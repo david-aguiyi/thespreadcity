@@ -365,11 +365,6 @@ footer a:hover{color:var(--orange)}
   .belief .side p{max-width:440px;margin:0 auto}
   .belief-eyebrow{margin-bottom:40px}
   .pillars,.msg-cards,.ways-grid{grid-template-columns:1fr 1fr;gap:20px}
-  .gallery-grid{padding:0;height:auto;grid-template-columns:1fr 1.4fr;grid-template-rows:auto}
-  .g-a{grid-column:1;grid-row:1 / span 2;min-height:360px}
-  .g-b{grid-column:2;grid-row:1;min-height:172px}
-  .g-c{grid-column:2;grid-row:2;min-height:172px}
-  .g-d{grid-column:1 / span 2;grid-row:3;min-height:300px}
   .testi-grid{grid-template-columns:1fr}
   .side-tag{position:static}
   .community .clock{text-align:left}
@@ -378,8 +373,6 @@ footer a:hover{color:var(--orange)}
 }
 @media(max-width:560px){
   .pillars,.foot-grid,.msg-cards,.ways-grid{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:1fr}
-  .g-a,.g-b,.g-c,.g-d{grid-column:1;grid-row:auto;min-height:230px}
   .svc,.form{padding:30px}
   .hero{padding-bottom:12vh}
   .hero .wrap{padding-left:8px;padding-right:8px}   /* let the tagline grow as big as possible */
