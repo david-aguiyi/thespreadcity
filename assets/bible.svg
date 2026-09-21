@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#141821"/><stop offset="1" stop-color="#0a0c12"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.4" r="0.5">
+      <stop offset="0" stop-color="#ffd9b0" stop-opacity="0.85"/>
+      <stop offset="0.4" stop-color="#ff5a00" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ff5a00" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="bb"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- rising light from pages -->
+  <g opacity="0.55" filter="url(#bb)">
+    <polygon points="400,300 330,20 470,20" fill="#ffb27a" opacity="0.5"/>
+    <polygon points="400,300 240,60 300,20" fill="#ff8a3d" opacity="0.3"/>
+    <polygon points="400,300 560,60 500,20" fill="#ff8a3d" opacity="0.3"/>
+  </g>
+  <!-- open book -->
+  <g>
+    <path d="M400 300 C 320 250, 210 250, 150 285 L150 430 C 210 395, 320 395, 400 445 Z" fill="#0038ff"/>
+    <path d="M400 300 C 480 250, 590 250, 650 285 L650 430 C 590 395, 480 395, 400 445 Z" fill="#1e6bff"/>
+    <path d="M400 300 L400 445" stroke="#02030a" stroke-width="6"/>
+    <!-- text lines -->
+    <g stroke="#cfe0ff" stroke-width="3" opacity="0.6">
+      <line x1="200" y1="305" x2="360" y2="322"/>
+      <line x1="200" y1="330" x2="360" y2="347"/>
+      <line x1="200" y1="355" x2="360" y2="372"/>
+      <line x1="440" y1="322" x2="600" y2="305"/>
+      <line x1="440" y1="347" x2="600" y2="330"/>
+      <line x1="440" y1="372" x2="600" y2="355"/>
+    </g>
+  </g>
+  <!-- embers -->
+  <g fill="#ff7a2e"><circle cx="360" cy="150" r="3" opacity="0.8"/><circle cx="440" cy="120" r="2.5" opacity="0.7"/><circle cx="400" cy="90" r="2" opacity="0.6"/><circle cx="320" cy="200" r="2" opacity="0.5"/><circle cx="480" cy="190" r="2" opacity="0.5"/></g>
+</svg>

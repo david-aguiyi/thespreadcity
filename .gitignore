@@ -1,0 +1,10 @@
+# reference material (screen recordings, scratch)
+_ref/
+
+# dependencies
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log

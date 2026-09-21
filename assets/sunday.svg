@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="s1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1c4d"/><stop offset="1" stop-color="#06102b"/>
+    </linearGradient>
+    <radialGradient id="s2" cx="0.5" cy="0.28" r="0.5">
+      <stop offset="0" stop-color="#4d8bff" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#1e6bff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#0038ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="b1"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#s1)"/>
+  <rect width="800" height="600" fill="url(#s2)"/>
+  <!-- stage light beams -->
+  <g opacity="0.5" filter="url(#b1)">
+    <polygon points="400,150 250,600 320,600" fill="#6f9dff" opacity="0.35"/>
+    <polygon points="400,150 480,600 550,600" fill="#6f9dff" opacity="0.35"/>
+    <polygon points="400,150 150,600 210,600" fill="#9dbcff" opacity="0.2"/>
+    <polygon points="400,150 590,600 650,600" fill="#9dbcff" opacity="0.2"/>
+  </g>
+  <!-- ember -->
+  <g fill="#ff7a2e"><circle cx="300" cy="250" r="3" opacity="0.8"/><circle cx="520" cy="300" r="2.5" opacity="0.7"/><circle cx="420" cy="200" r="2" opacity="0.6"/></g>
+  <!-- stage & figure -->
+  <rect x="0" y="470" width="800" height="130" fill="#04050a"/>
+  <g fill="#02030a">
+    <circle cx="400" cy="300" r="26"/>
+    <path d="M368 470 v-130 a32 32 0 0 1 64 0 v130 z"/>
+    <path d="M372 350 l-46 -70 a7 7 0 0 1 12 -8 l44 62 z"/>
+    <path d="M428 350 l46 -70 a7 7 0 0 0 -12 -8 l-44 62 z"/>
+  </g>
+  <!-- crowd -->
+  <g fill="#000">
+    <g id="p"><circle cx="0" cy="430" r="12"/><path d="M-13 600 v-150 a13 13 0 0 1 26 0 v150 z"/></g>
+    <use href="#p" x="70"/><use href="#p" x="150"/><use href="#p" x="230"/><use href="#p" x="560"/><use href="#p" x="640"/><use href="#p" x="720"/><use href="#p" x="800"/>
+  </g>
+</svg>

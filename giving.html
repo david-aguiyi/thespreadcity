@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Giving, The Spread City</title>
+<meta name="description" content="Give to Haven Word Church, The Spread City. Your seed helps carry the fire of God from one city to the next." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header" class="solid">
+  <a href="index.html" class="logo">
+    <img src="assets/logo.svg" class="logo-img" alt="The Spread City" />
+  </a>
+  <nav class="nav-desk">
+    <a class="lnk" href="index.html#mission">About</a>
+    <a class="lnk" href="index.html#services">Services</a>
+    <a class="lnk" href="messages.html">Messages</a>
+    <a class="lnk active" href="giving.html">Giving</a>
+    <a class="lnk" href="contact.html">Contact</a>
+    <a class="btn btn-orange" href="contact.html#visit">Plan a Visit</a>
+  </nav>
+  <a class="btn btn-ghost menu-btn" onclick="openM()">Menu</a>
+</header>
+<div class="mobile-nav" id="mnav">
+  <span class="mobile-close" onclick="closeM()">✕</span>
+  <a href="index.html#mission">About</a>
+  <a href="index.html#services">Services</a>
+  <a href="messages.html">Messages</a>
+  <a href="giving.html">Giving</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html#visit">Plan a Visit</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="globe-bg"></div>
+  <div class="wrap">
+    <div class="crumb reveal"><a href="index.html">Home</a> / Giving</div>
+    <h1 class="display reveal">Give. And<br>watch it <span class="o">spread.</span></h1>
+    <p class="reveal">Every seed you sow fuels the mandate, training ministers, reaching streets and nations, and carrying the fire of God from one city to the next.</p>
+  </div>
+</section>
+
+<!-- WHY GIVE -->
+<section class="give-why">
+  <div class="wrap give-grid">
+    <div class="reveal">
+      <div class="eyebrow">Why We Give</div>
+      <h2 style="margin-top:14px">Worship that goes beyond words.</h2>
+      <p>Giving is not a transaction, it is worship, obedience, and partnership in the Gospel. When you give to The Spread City, you help equip believers, resource the work of ministry, and take the knowledge of Christ into homes, hearts and territories.</p>
+      <div class="verse">"Give, and it will be given to you. A good measure, pressed down, shaken together and running over.", Luke 6:38</div>
+    </div>
+    <div class="reveal">
+      <div class="way feature">
+        <div class="ic">🔥</div>
+        <h3>Your seed at work</h3>
+        <div class="rows">
+          <div class="row"><span>Training &amp; discipleship</span><b>Equipping ministers</b></div>
+          <div class="row"><span>Outreach &amp; missions</span><b>Reaching cities</b></div>
+          <div class="row"><span>Media &amp; messages</span><b>Spreading the Word</b></div>
+          <div class="row"><span>Church &amp; community</span><b>Serving people</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAYS TO GIVE -->
+<section class="give-ways">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow reveal">Ways to Give</div>
+        <h2 class="display reveal" style="font-size:clamp(2rem,5vw,3.6rem)">Choose your<br>channel</h2>
+      </div>
+      <p class="reveal">Tithes, offerings, seeds and partnerships. Add your real account and payment details in the marked spots.</p>
+    </div>
+    <div class="ways-grid">
+      <div class="way reveal">
+        <div class="ic">🏦</div>
+        <h3>Bank Transfer</h3>
+        <p style="color:rgba(255,255,255,.72);font-size:.95rem">Give directly from your bank in Naira.</p>
+        <div class="rows">
+          <div class="row"><span>Bank</span><b>Your Bank Name</b></div>
+          <div class="row"><span>Account name</span><b>Haven Word Church</b></div>
+          <div class="row"><span>Account no.</span><b>0000000000</b></div>
+        </div>
+        <span class="todo">Add real account details</span>
+      </div>
+      <div class="way feature reveal">
+        <div class="ic">💳</div>
+        <h3>Give Online</h3>
+        <p style="color:rgba(255,255,255,.82);font-size:.95rem">Card, transfer or USSD via a secure payment link.</p>
+        <div class="rows">
+          <div class="row"><span>Cards</span><b>Visa · Verve · MC</b></div>
+          <div class="row"><span>Wallets</span><b>Transfer · USSD</b></div>
+        </div>
+        <a class="btn btn-orange" data-link="giveOnline" style="margin-top:22px;width:100%;justify-content:center">Give Now ▸</a>
+        <div class="todo" style="margin-top:10px">Add Paystack/Flutterwave link</div>
+      </div>
+      <div class="way reveal">
+        <div class="ic">✈️</div>
+        <h3>In Service &amp; Telegram</h3>
+        <p style="color:rgba(255,255,255,.72);font-size:.95rem">Give in person on Sundays, or follow giving prompts on our channel.</p>
+        <div class="rows">
+          <div class="row"><span>Sundays</span><b>7:30 &amp; 10 AM</b></div>
+          <div class="row"><span>Daily</span><b>Telegram 5-6 AM</b></div>
+        </div>
+        <a class="btn btn-ghost" data-link="telegram" style="margin-top:22px;width:100%;justify-content:center">Open Telegram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <div class="eyebrow reveal" style="text-align:center;display:block">Thank You</div>
+    <h2 class="display reveal" style="margin-top:16px">Sow into the<br><span class="o">movement.</span></h2>
+    <p class="reveal">Your generosity keeps the fire spreading, here, there, and everywhere.</p>
+    <div class="btns reveal">
+      <a class="btn btn-orange" data-link="giveOnline">Give Online ▸</a>
+      <a class="btn btn-ghost" href="contact.html">Talk to Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo"><img src="assets/logo.svg" class="logo-img" alt="The Spread City" /></a>
+        <p>Raising ministers, not spectators, carrying the fire of God from one life to another, one city at a time.</p>
+        <div class="socials">
+          <a data-link="instagram" aria-label="Instagram">◎</a>
+          <a data-link="youtube" aria-label="YouTube">▸</a>
+          <a data-link="telegram" aria-label="Telegram">✈</a>
+          <a data-link="x" aria-label="X">✕</a>
+        </div>
+      </div>
+      <div><h5>Explore</h5><ul>
+        <li><a href="index.html#mission">About Us</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="messages.html">Messages</a></li>
+        <li><a href="giving.html">Giving</a></li>
+      </ul></div>
+      <div><h5>Gather</h5><ul>
+        <li><a href="index.html#services">Sunday · 7:30 &amp; 10 AM</a></li>
+        <li><a href="index.html#services">Wednesday · 5:30 PM</a></li>
+        <li><a data-link="telegram">Telegram · 5-6 AM Daily</a></li>
+        <li><a href="contact.html#visit">Plan a Visit</a></li>
+      </ul></div>
+      <div><h5>Find Us</h5><ul>
+        <li><a data-link="map">Opposite Gate 5,</a></li>
+        <li><a data-link="map">Adamasingba, Ibadan,</a></li>
+        <li><a data-link="map">Oyo State, Nigeria</a></li>
+        <li><a data-link="directions">Get Directions ▸</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Haven Word Church, The Spread City. All rights reserved.</span>
+      <span>Filling the earth with the knowledge of His glory.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

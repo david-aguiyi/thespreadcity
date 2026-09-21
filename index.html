@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Spread City, Haven Word Church</title>
+<meta name="description" content="Haven Word Church, The Spread City. We are here, we are there, we are everywhere, raising ministers, not spectators. Ibadan, Nigeria." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="header">
+  <a href="index.html" class="logo">
+    <img src="assets/logo.svg" class="logo-img" alt="The Spread City" />
+  </a>
+  <nav class="nav-desk">
+    <a class="lnk" href="#mission">About</a>
+    <a class="lnk" href="#services">Services</a>
+    <a class="lnk" href="messages.html">Messages</a>
+    <a class="lnk" href="giving.html">Giving</a>
+    <a class="lnk" href="contact.html">Contact</a>
+    <a class="btn btn-orange" href="contact.html#visit">Plan a Visit</a>
+  </nav>
+  <a class="btn btn-ghost menu-btn" onclick="openM()">Menu</a>
+</header>
+
+<div class="mobile-nav" id="mnav">
+  <span class="mobile-close" onclick="closeM()">✕</span>
+  <a href="#mission" onclick="closeM()">About</a>
+  <a href="#services" onclick="closeM()">Services</a>
+  <a href="messages.html">Messages</a>
+  <a href="giving.html">Giving</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html#visit">Plan a Visit</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-media">
+    <div class="photo"></div>
+    <div class="grain"></div>
+    <div class="scrim"></div>
+  </div>
+  <div class="wrap">
+    <h1 class="display reveal">We are here.<br>We are there.<br>We are <span class="o">everywhere.</span></h1>
+    <p class="hero-sub reveal">In this generation, God is raising ministers, not spectators. From one life to another, from one city to the next, the fire continues to spread. There is a place for you in this divine movement.</p>
+    <div class="hero-cta reveal">
+      <a href="contact.html#visit" class="btn btn-orange">Plan Your Visit</a>
+      <a href="messages.html" class="btn btn-ghost">Watch a Message ▸</a>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- ============ MISSION ============ -->
+<section class="mission" id="mission">
+  <div class="wrap grid">
+    <div class="side-tag reveal">
+      <div class="eyebrow">Who We Are</div>
+      <div class="num">01</div>
+    </div>
+    <div>
+      <h2 class="reveal">We don't gather for entertainment. We gather to be <em>equipped.</em></h2>
+      <div class="body" style="margin-top:34px">
+        <p class="reveal"><span class="hl">Welcome to Haven Word Church, The Spread City.</span> This calling is not limited to the pulpit. It extends to the streets, the classrooms, the marketplaces, and the nations of the world. We believe every believer is called not only to <em>believe</em>, but to <em>build.</em></p>
+        <p class="reveal">We come together around the Word of God, the Spirit of God, and the supernatural mandate to go into all the world and make disciples. Here, we are being trained to carry the fire of God to the ends of the earth, filling hearts, homes, and territories with the knowledge of Christ.</p>
+        <p class="reveal">Until the earth is filled with the knowledge of the glory of the Lord, just as the waters cover the sea. From one life to another and from one city to the next, <span class="hl">the fire continues to spread.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BELIEF ============ -->
+<section class="belief">
+  <div class="globe"></div>
+  <div class="belief-eyebrow reveal">Our Belief</div>
+  <div class="wrap belief-grid">
+    <div class="side side-l reveal">
+      <p>Every believer is called to preach the Word, heal the sick, and disciple nations, one person at a time.</p>
+    </div>
+
+    <div class="center">
+      <div class="belief-roller reveal" aria-hidden="true">
+        <ul class="roller-track">
+          <li><span class="ln">We are <span class="circ">ministers</span>,<br>not spectators</span></li>
+          <li><span class="ln">We are a<br><span class="circ">praying</span> church</span></li>
+          <li><span class="ln">We disciple<br>the <span class="circ">nations</span></span></li>
+          <li><span class="ln">We love <span class="circ">God</span><br>and we love people</span></li>
+          <li><span class="ln">We carry the<br><span class="circ">fire</span> everywhere</span></li>
+          <li><span class="ln">We are here,<br>there &amp; <span class="circ">everywhere</span></span></li>
+          <!-- duplicate set for a seamless upward loop -->
+          <li><span class="ln">We are <span class="circ">ministers</span>,<br>not spectators</span></li>
+          <li><span class="ln">We are a<br><span class="circ">praying</span> church</span></li>
+          <li><span class="ln">We disciple<br>the <span class="circ">nations</span></span></li>
+          <li><span class="ln">We love <span class="circ">God</span><br>and we love people</span></li>
+          <li><span class="ln">We carry the<br><span class="circ">fire</span> everywhere</span></li>
+          <li><span class="ln">We are here,<br>there &amp; <span class="circ">everywhere</span></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="side side-r reveal">
+      <p>We gather to be equipped, then sent, filling cities with the knowledge of Christ until the earth is full of His glory.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow reveal">Gather With Us</div>
+        <h2 class="display reveal">Weekly<br>Services</h2>
+      </div>
+      <p class="reveal">Join us for worship, teaching, and fellowship. There's a seat with your name on it.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc a reveal">
+        <div>
+          <div class="kicker">Sunday Service</div>
+          <h3>Sunday<br>Worship</h3>
+          <div class="when">7:30 AM &amp; 10:00 AM</div>
+          <div class="loc">📍 Opposite Gate 5, Adamasingba, Ibadan</div>
+        </div>
+        <div class="foot">
+          <span style="color:var(--grey)">Inspiring worship &amp; biblical teaching</span>
+          <a class="arrow" data-link="directions">↗</a>
+        </div>
+      </div>
+      <div class="svc b reveal">
+        <div>
+          <div class="kicker" style="color:var(--blue-glow)">Bible Study</div>
+          <h3>Midweek<br>Word</h3>
+          <div class="when">Wednesdays · 5:30 PM</div>
+          <div class="loc">📍 Opposite Gate 5, Adamasingba, Ibadan</div>
+        </div>
+        <div class="foot">
+          <span style="color:var(--grey)">A deep dive into God's Word, together</span>
+          <a class="arrow" data-link="directions">↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MESSAGES ============ -->
+<section class="messages" id="messages">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow reveal">Be Inspired</div>
+        <h2 class="display reveal">Latest<br>Messages</h2>
+      </div>
+      <p class="reveal">Watch and listen to the Word, anywhere, anytime. Fresh fire, every week.</p>
+    </div>
+    <div class="msg-grid">
+      <div class="video-ph reveal">
+        <div class="note">🎬 VIDEO GOES HERE, latest message embed</div>
+        <button class="play" data-video aria-label="Play latest message">
+          <svg width="30" height="34" viewBox="0 0 30 34" fill="#fff"><path d="M0 0l30 17L0 34z"/></svg>
+        </button>
+        <div class="cap">
+          <h3>Latest Video Message</h3>
+          <p>Watch our most recent message and be inspired by the Word.</p>
+        </div>
+      </div>
+      <div class="audio-card reveal">
+        <div>
+          <div class="kicker" style="font-family:'Space Grotesk';font-weight:600;letter-spacing:.16em;font-size:.72rem;text-transform:uppercase">Audio · On the go</div>
+          <h3>Latest Audio</h3>
+          <p style="color:rgba(255,255,255,.72)">Listen to our audio messages anywhere via our Telegram channel.</p>
+          <div class="bars">
+            <i style="animation-delay:0s"></i><i style="animation-delay:.1s"></i><i style="animation-delay:.2s"></i><i style="animation-delay:.3s"></i><i style="animation-delay:.15s"></i><i style="animation-delay:.25s"></i><i style="animation-delay:.05s"></i><i style="animation-delay:.35s"></i><i style="animation-delay:.2s"></i><i style="animation-delay:.1s"></i><i style="animation-delay:.3s"></i><i style="animation-delay:.15s"></i>
+          </div>
+        </div>
+        <a class="btn btn-blue" data-link="telegram" style="justify-content:center">Listen on Telegram</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px" class="reveal">
+      <a class="btn btn-ghost" href="messages.html">Browse All Messages ▸</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEADERSHIP ============ -->
+<section class="leaders" id="leaders">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow reveal">Our Leadership</div>
+        <h2 class="display reveal">Shepherds<br>&amp; Servants</h2>
+      </div>
+      <p class="reveal">Meet the leaders who guide our church family with wisdom, passion, and love.</p>
+    </div>
+    <div class="lead-grid">
+      <div class="leader reveal">
+        <div class="portrait pa">
+          <span class="badge">PAA</span>
+        </div>
+        <div class="info">
+          <div class="role">Founder &amp; Lead Pastor</div>
+          <h3>Pastor Anthonia Amadi</h3>
+          <p>Pastor Anthonia Ikiseh Amadi (PAA) is a preacher of the gospel of Jesus, committed to raising, training and equipping men, women, boys and girls for the high calling of the work of ministry.</p>
+        </div>
+      </div>
+      <div class="leader reveal">
+        <div class="portrait pb">
+          <span class="badge">CA</span>
+        </div>
+        <div class="info">
+          <div class="role" style="color:var(--blue-glow)">Ordained Pastor</div>
+          <h3>Pastor Chibuotu Amadi</h3>
+          <p>An ordained pastor at Haven Word Church, serving alongside Pastor Anthonia with dedication and commitment, spreading the Word and building a strong foundation of faith within the congregation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY / LIFE ============ -->
+<section class="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow reveal">Our Family</div>
+        <h2 class="display reveal">Life at<br>The Spread City</h2>
+      </div>
+      <p class="reveal">One family, many stories — worship, fellowship, and the fire spreading from one life to the next.</p>
+    </div>
+  </div>
+  <div class="gallery-grid reveal">
+    <div class="gtile g-a"><span class="lbl">📷 Community photo</span><span class="ico">👥</span></div>
+    <div class="gtile g-b"><span class="lbl">📷 Worship photo</span><span class="ico">🙌</span></div>
+    <div class="gtile g-c"><span class="lbl">📷 Fellowship photo</span><span class="ico">🔥</span></div>
+    <div class="gtile g-d"><span class="lbl">📷 Community photo</span><span class="ico">✨</span></div>
+  </div>
+</section>
+
+<!-- ============ COMMUNITY ============ -->
+<section class="community" id="community">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" style="color:#fff;opacity:.85">Daily Fellowship</div>
+      <h2 class="display" style="margin-top:16px">Join our<br>Telegram<br>Community</h2>
+      <p>Connect with us every day for prayer, devotionals, and spiritual growth. Wherever you are, the fire keeps spreading.</p>
+      <a class="btn btn-dark" data-link="telegram">Join Telegram Channel ▸</a>
+    </div>
+    <div class="clock">5-6<small>AM · EVERY DAY</small></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIES ============ -->
+<section class="testi">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow reveal">God's Faithfulness</div>
+        <h2 class="display reveal">Testimonies</h2>
+      </div>
+      <p class="reveal">Read inspiring stories from our church family, and share your own.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="quote reveal">
+        <div class="mark">"</div>
+        <p>This church didn't just teach me to believe, it trained me to build. I found my calling here.</p>
+        <div class="who"><div class="dot">G</div><div><b>Grace O.</b><span>Member since 2021</span></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="mark">"</div>
+        <p>The fire is real. From a quiet Wednesday Bible study, my whole family's walk with God has been transformed.</p>
+        <div class="who"><div class="dot" style="background:linear-gradient(135deg,#0038ff,#3d7bff)">D</div><div><b>David A.</b><span>Ibadan</span></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="mark">"</div>
+        <p>I came in as a spectator. I'm leaving equipped as a minister. The Spread City changed everything for me.</p>
+        <div class="who"><div class="dot">B</div><div><b>Blessing N.</b><span>Young Adult</span></div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:50px" class="reveal">
+      <a class="btn btn-ghost" href="contact.html">Share Your Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-band" id="visit">
+  <div class="wrap">
+    <div class="eyebrow reveal" style="text-align:center;display:block">Plan a Visit</div>
+    <h2 class="display reveal" style="margin-top:16px">There's a place<br>for <span class="o">you.</span></h2>
+    <p class="reveal">Opposite Gate 5, Adamasingba, Ibadan, Oyo State. Come as you are, Sunday 7:30 AM &amp; 10:00 AM.</p>
+    <div class="btns reveal">
+      <a class="btn btn-orange" data-link="directions">Get Directions ▸</a>
+      <a class="btn btn-ghost" href="#services">See Service Times</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo">
+          <img src="assets/logo.svg" class="logo-img" alt="The Spread City" />
+        </a>
+        <p>Raising ministers, not spectators, carrying the fire of God from one life to another, one city at a time.</p>
+        <div class="socials">
+          <a data-link="instagram" aria-label="Instagram">◎</a>
+          <a data-link="youtube" aria-label="YouTube">▸</a>
+          <a data-link="telegram" aria-label="Telegram">✈</a>
+          <a data-link="x" aria-label="X">✕</a>
+        </div>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#mission">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="messages.html">Messages</a></li>
+          <li><a href="giving.html">Giving</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Gather</h5>
+        <ul>
+          <li><a href="#services">Sunday · 7:30 &amp; 10 AM</a></li>
+          <li><a href="#services">Wednesday · 5:30 PM</a></li>
+          <li><a data-link="telegram">Telegram · 5-6 AM Daily</a></li>
+          <li><a href="contact.html#visit">Plan a Visit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Find Us</h5>
+        <ul>
+          <li><a data-link="map">Opposite Gate 5,</a></li>
+          <li><a data-link="map">Adamasingba, Ibadan,</a></li>
+          <li><a data-link="map">Oyo State, Nigeria</a></li>
+          <li><a data-link="directions">Get Directions ▸</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Haven Word Church, The Spread City. All rights reserved.</span>
+      <span>Filling the earth with the knowledge of His glory.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

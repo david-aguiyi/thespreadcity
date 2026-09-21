@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="p1bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#12224f"/><stop offset="1" stop-color="#080a12"/>
+    </linearGradient>
+    <radialGradient id="p1g" cx="0.5" cy="0.32" r="0.55">
+      <stop offset="0" stop-color="#3d7bff" stop-opacity="0.85"/>
+      <stop offset="0.5" stop-color="#0038ff" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#0038ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="p1f" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1230"/><stop offset="1" stop-color="#02030a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="700" fill="url(#p1bg)"/>
+  <rect width="600" height="700" fill="url(#p1g)"/>
+  <!-- halo ring -->
+  <circle cx="300" cy="250" r="150" fill="none" stroke="#4d8bff" stroke-width="2" opacity="0.4"/>
+  <circle cx="300" cy="250" r="185" fill="none" stroke="#4d8bff" stroke-width="1" opacity="0.2"/>
+  <!-- figure silhouette (portrait bust) -->
+  <g fill="url(#p1f)">
+    <circle cx="300" cy="235" r="82"/>
+    <path d="M170 700 v-160 c0-90 60-150 130-150 s130 60 130 150 v160 z"/>
+  </g>
+  <!-- rim light -->
+  <path d="M300 153 a82 82 0 0 1 78 108" fill="none" stroke="#6f9dff" stroke-width="4" opacity="0.6" stroke-linecap="round"/>
+  <path d="M410 560 c0-80 -40 -140 -95 -158" fill="none" stroke="#6f9dff" stroke-width="4" opacity="0.4" stroke-linecap="round"/>
+  <!-- embers -->
+  <g fill="#ff7a2e"><circle cx="180" cy="180" r="3" opacity="0.7"/><circle cx="430" cy="200" r="2.5" opacity="0.6"/><circle cx="150" cy="320" r="2" opacity="0.5"/></g>
+</svg>
