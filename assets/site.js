@@ -109,6 +109,39 @@ requestAnimationFrame(fitHero);
 setTimeout(fitHero, 300);
 fitHero();
 
+/* ---- Fit the belief carousel: biggest size that keeps every statement on 2 lines ---- */
+function fitBelief(){
+  const roller = document.querySelector('.belief-roller');
+  if(!roller) return;
+  const items = [...roller.querySelectorAll('.roller-track li')];
+  if(!items.length) return;
+  const avail = roller.clientWidth - 24;      // li has 12px padding each side
+  if(avail <= 0) return;
+  const REF = 100;
+  let minFont = Infinity;
+  items.forEach(li => {
+    const ln = li.querySelector('.ln');
+    if(!ln) return;
+    const p = { pos: ln.style.position, w: ln.style.width, vis: ln.style.visibility, fs: li.style.fontSize };
+    li.style.fontSize = REF + 'px';
+    ln.style.position = 'absolute';           // out of the flex flow so it can't shrink
+    ln.style.width = 'max-content';           // with <br>, this = the widest of the 2 lines
+    ln.style.visibility = 'hidden';
+    const widest = ln.getBoundingClientRect().width;
+    ln.style.position = p.pos; ln.style.width = p.w; ln.style.visibility = p.vis; li.style.fontSize = p.fs;
+    if(widest > 0) minFont = Math.min(minFont, REF * (avail / widest));
+  });
+  if(minFont === Infinity) return;
+  minFont = Math.max(24, Math.min(minFont, 88));
+  roller.style.setProperty('--bfs', minFont + 'px');
+}
+addEventListener('resize', fitBelief);
+addEventListener('orientationchange', fitBelief);
+addEventListener('load', fitBelief);
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitBelief);
+setTimeout(fitBelief, 300);
+fitBelief();
+
 /* ---- Belief: center-emphasized vertical carousel (steps up one statement at a time) ---- */
 (function(){
   const track = document.querySelector('.roller-track');

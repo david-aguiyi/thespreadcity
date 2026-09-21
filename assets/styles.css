@@ -144,9 +144,9 @@ footer .logo .logo-img{height:42px}
   transition:opacity .8s var(--ease),font-size .8s var(--ease)}
 .roller-track li .ln{display:block;text-align:center}
 .roller-track li.active{
-  /* active (centre) state — big, thick */
+  /* active (centre) state — big, thick; size auto-fit by JS to fill width in 2 lines */
   font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.015em;
-  font-size:clamp(1.9rem,4.6vw,3.9rem);line-height:.94;opacity:1}
+  font-size:var(--bfs, clamp(1.9rem,4.6vw,3.9rem));line-height:.94;opacity:1}
 .roller-track li .circ{position:relative;white-space:nowrap;display:inline-block}
 /* hand-drawn orange circle around the emphatic word — only on the active statement */
 .roller-track li .circ::after{content:"";position:absolute;left:-11%;top:-18%;width:122%;height:136%;pointer-events:none;
