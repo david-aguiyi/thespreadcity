@@ -246,13 +246,15 @@ footer .logo .logo-img{height:42px}
 .leader p{color:rgba(255,255,255,.72);font-size:.98rem}
 
 /* ---------- Gallery / Life collage ---------- */
-.gallery{padding:130px 0;background:#05060a;overflow:hidden}
-.gallery .wrap .sec-head{margin-bottom:50px}
-.gallery-grid{display:grid;grid-template-columns:1.15fr 1fr 1.15fr;grid-template-rows:repeat(2,minmax(0,1fr));gap:16px;
-  height:clamp(420px,62vh,640px);max-width:var(--maxw);margin:0 auto;padding:0 40px}
-.gtile{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);transition:transform .5s var(--ease)}
-.gtile:hover{transform:translateY(-6px)}
-.gtile::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(5,6,10,.05),rgba(5,6,10,.5))}
+.gallery{padding:110px 0 0;background:#05060a;overflow:hidden}
+.gallery .wrap .sec-head{margin-bottom:0}
+/* full-bleed collage: tall left | middle split in two | wider tall right (matches The New) */
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr 1.9fr;grid-template-rows:46fr 54fr;gap:0;
+  width:100%;max-width:none;margin:54px 0 0;padding:0;height:clamp(460px,64vh,680px)}
+.gtile{position:relative;overflow:hidden}
+.gtile > *{transition:transform .6s var(--ease)}
+.gtile:hover{}
+.gtile::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(5,6,10,.04),rgba(5,6,10,.45))}
 .gtile .lbl{position:absolute;top:14px;left:14px;z-index:3;font-family:'Manrope',sans-serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8);border:1px dashed rgba(255,255,255,.4);padding:5px 9px;border-radius:6px;background:rgba(5,6,10,.35)}
 .gtile .ico{display:none}
 .gtile{background-size:cover;background-position:center;background-repeat:no-repeat}
@@ -363,7 +365,7 @@ footer a:hover{color:var(--orange)}
   .belief .side p{max-width:440px;margin:0 auto}
   .belief-eyebrow{margin-bottom:40px}
   .pillars,.msg-cards,.ways-grid{grid-template-columns:1fr 1fr;gap:20px}
-  .gallery-grid{padding:0 22px;height:auto;grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gallery-grid{padding:0;height:auto;grid-template-columns:1fr 1.4fr;grid-template-rows:auto}
   .g-a{grid-column:1;grid-row:1 / span 2;min-height:360px}
   .g-b{grid-column:2;grid-row:1;min-height:172px}
   .g-c{grid-column:2;grid-row:2;min-height:172px}
