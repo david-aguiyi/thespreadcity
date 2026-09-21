@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
@@ -22,20 +23,20 @@
     <a class="lnk" href="#services">Services</a>
     <a class="lnk" href="messages.html">Messages</a>
     <a class="lnk" href="giving.html">Giving</a>
-    <a class="lnk" href="contact.html">Contact</a>
-    <a class="btn btn-orange" href="contact.html#visit">Plan a Visit</a>
+    <a class="lnk" href="#prayer">Daily Prayer</a>
+    <a class="btn btn-orange" href="#visit">Plan a Visit</a>
   </nav>
   <a class="btn btn-ghost menu-btn" onclick="openM()">Menu</a>
 </header>
 
 <div class="mobile-nav" id="mnav">
-  <span class="mobile-close" onclick="closeM()">✕</span>
+  <span class="mobile-close" onclick="closeM()"><i class="fa-solid fa-xmark"></i></span>
   <a href="#mission" onclick="closeM()">About</a>
   <a href="#services" onclick="closeM()">Services</a>
   <a href="messages.html">Messages</a>
   <a href="giving.html">Giving</a>
-  <a href="contact.html">Contact</a>
-  <a href="contact.html#visit">Plan a Visit</a>
+  <a href="#prayer" onclick="closeM()">Daily Prayer</a>
+  <a href="#visit" onclick="closeM()">Plan a Visit</a>
 </div>
 
 <!-- ============ HERO ============ -->
@@ -49,8 +50,8 @@
     <h1 class="display reveal">We are here.<br>We are there.<br>We are <span class="o">everywhere.</span></h1>
     <p class="hero-sub reveal">In this generation, God is raising ministers, not spectators. From one life to another, from one city to the next, the fire continues to spread. There is a place for you in this divine movement.</p>
     <div class="hero-cta reveal">
-      <a href="contact.html#visit" class="btn btn-orange">Plan Your Visit</a>
-      <a href="messages.html" class="btn btn-ghost">Watch a Message ▸</a>
+      <a href="#visit" class="btn btn-orange">Plan Your Visit</a>
+      <a href="messages.html" class="btn btn-ghost">Watch a Message <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
   <div class="scroll-hint">Scroll</div>
@@ -68,10 +69,10 @@
     </div>
   </div>
   <div class="gallery-grid reveal">
-    <div class="gtile g-a"><span class="lbl">📷 Community photo</span><span class="ico">👥</span></div>
-    <div class="gtile g-b"><span class="lbl">📷 Worship photo</span><span class="ico">🙌</span></div>
-    <div class="gtile g-c"><span class="lbl">📷 Fellowship photo</span><span class="ico">🔥</span></div>
-    <div class="gtile g-d"><span class="lbl">📷 Community photo</span><span class="ico">✨</span></div>
+    <div class="gtile g-a"><span class="lbl"><i class="fa-solid fa-camera"></i> Community photo</span><span class="ico"><i class="fa-solid fa-users"></i></span></div>
+    <div class="gtile g-b"><span class="lbl"><i class="fa-solid fa-camera"></i> Worship photo</span><span class="ico"><i class="fa-solid fa-hands-praying"></i></span></div>
+    <div class="gtile g-c"><span class="lbl"><i class="fa-solid fa-camera"></i> Fellowship photo</span><span class="ico"><i class="fa-solid fa-fire"></i></span></div>
+    <div class="gtile g-d"><span class="lbl"><i class="fa-solid fa-camera"></i> Community photo</span><span class="ico"><i class="fa-solid fa-heart"></i></span></div>
   </div>
 </section>
 
@@ -143,12 +144,12 @@
         <div>
           <div class="kicker">Sunday Service</div>
           <h3>Sunday<br>Worship</h3>
-          <div class="when">7:30 AM &amp; 10:00 AM</div>
-          <div class="loc">📍 Opposite Gate 5, Adamasingba, Ibadan</div>
+          <div class="when">First Service · 7:30 AM<br>Second Service · 10:00 AM</div>
+          <div class="loc"><i class="fa-solid fa-location-dot"></i> Opposite Gate 5, Adamasingba, Ibadan</div>
         </div>
         <div class="foot">
           <span style="color:var(--grey)">Inspiring worship &amp; biblical teaching</span>
-          <a class="arrow" data-link="directions">↗</a>
+          <a class="arrow" data-link="directions"><i class="fa-solid fa-arrow-up-right"></i></a>
         </div>
       </div>
       <div class="svc b reveal">
@@ -156,11 +157,11 @@
           <div class="kicker" style="color:var(--blue-glow)">Bible Study</div>
           <h3>Midweek<br>Word</h3>
           <div class="when">Wednesdays · 5:30 PM</div>
-          <div class="loc">📍 Opposite Gate 5, Adamasingba, Ibadan</div>
+          <div class="loc"><i class="fa-solid fa-location-dot"></i> Opposite Gate 5, Adamasingba, Ibadan</div>
         </div>
         <div class="foot">
           <span style="color:var(--grey)">A deep dive into God's Word, together</span>
-          <a class="arrow" data-link="directions">↗</a>
+          <a class="arrow" data-link="directions"><i class="fa-solid fa-arrow-up-right"></i></a>
         </div>
       </div>
     </div>
@@ -179,7 +180,7 @@
     </div>
     <div class="msg-grid">
       <div class="video-ph reveal">
-        <div class="note">🎬 VIDEO GOES HERE, latest message embed</div>
+        <div class="note"><i class="fa-solid fa-video"></i> VIDEO GOES HERE, latest message embed</div>
         <button class="play" data-video aria-label="Play latest message">
           <svg width="30" height="34" viewBox="0 0 30 34" fill="#fff"><path d="M0 0l30 17L0 34z"/></svg>
         </button>
@@ -201,7 +202,7 @@
       </div>
     </div>
     <div style="text-align:center;margin-top:44px" class="reveal">
-      <a class="btn btn-ghost" href="messages.html">Browse All Messages ▸</a>
+      <a class="btn btn-ghost" href="messages.html">Browse All Messages <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -242,15 +243,15 @@
 </section>
 
 <!-- ============ COMMUNITY ============ -->
-<section class="community" id="community">
+<section class="community" id="prayer">
   <div class="wrap">
     <div>
-      <div class="eyebrow" style="color:#fff;opacity:.85">Daily Fellowship</div>
-      <h2 class="display" style="margin-top:16px">Join our<br>Telegram<br>Community</h2>
-      <p>Connect with us every day for prayer, devotionals, and spiritual growth. Wherever you are, the fire keeps spreading.</p>
-      <a class="btn btn-dark" data-link="telegram">Join Telegram Channel ▸</a>
+      <div class="eyebrow" style="color:#fff;opacity:.85">Daily Prayer</div>
+      <h2 class="display" style="margin-top:16px">We are a<br>praying church</h2>
+      <p>Join us every morning for prayer, devotionals, and spiritual growth on our Telegram channel. Wherever you are, the fire keeps spreading.</p>
+      <a class="btn btn-dark" data-link="telegram"><i class="fa-brands fa-telegram"></i> Join Telegram Channel</a>
     </div>
-    <div class="clock">5-6<small>AM · EVERY DAY</small></div>
+    <div class="clock">6:00<small>to 6:30 AM · Every day</small></div>
   </div>
 </section>
 
@@ -282,7 +283,7 @@
       </div>
     </div>
     <div style="text-align:center;margin-top:50px" class="reveal">
-      <a class="btn btn-ghost" href="contact.html">Share Your Story</a>
+      <a class="btn btn-ghost" data-link="telegram">Share Your Story</a>
     </div>
   </div>
 </section>
@@ -294,7 +295,7 @@
     <h2 class="display reveal" style="margin-top:16px">There's a place<br>for <span class="o">you.</span></h2>
     <p class="reveal">Opposite Gate 5, Adamasingba, Ibadan, Oyo State. Come as you are, Sunday 7:30 AM &amp; 10:00 AM.</p>
     <div class="btns reveal">
-      <a class="btn btn-orange" data-link="directions">Get Directions ▸</a>
+      <a class="btn btn-orange" data-link="directions">Get Directions <i class="fa-solid fa-arrow-right"></i></a>
       <a class="btn btn-ghost" href="#services">See Service Times</a>
     </div>
   </div>
@@ -310,10 +311,10 @@
         </a>
         <p>Raising ministers, not spectators, carrying the fire of God from one life to another, one city at a time.</p>
         <div class="socials">
-          <a data-link="instagram" aria-label="Instagram">◎</a>
-          <a data-link="youtube" aria-label="YouTube">▸</a>
-          <a data-link="telegram" aria-label="Telegram">✈</a>
-          <a data-link="x" aria-label="X">✕</a>
+          <a data-link="instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a data-link="youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a data-link="telegram" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a data-link="x" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
       </div>
       <div>
@@ -330,8 +331,8 @@
         <ul>
           <li><a href="#services">Sunday · 7:30 &amp; 10 AM</a></li>
           <li><a href="#services">Wednesday · 5:30 PM</a></li>
-          <li><a data-link="telegram">Telegram · 5-6 AM Daily</a></li>
-          <li><a href="contact.html#visit">Plan a Visit</a></li>
+          <li><a href="#prayer">Daily Prayer · 6:00-6:30 AM</a></li>
+          <li><a href="#visit">Plan a Visit</a></li>
         </ul>
       </div>
       <div>
@@ -340,7 +341,7 @@
           <li><a data-link="map">Opposite Gate 5,</a></li>
           <li><a data-link="map">Adamasingba, Ibadan,</a></li>
           <li><a data-link="map">Oyo State, Nigeria</a></li>
-          <li><a data-link="directions">Get Directions ▸</a></li>
+          <li><a data-link="directions">Get Directions <i class="fa-solid fa-arrow-right"></i></a></li>
         </ul>
       </div>
     </div>

@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
@@ -22,8 +23,8 @@
     <a class="lnk" href="index.html#services">Services</a>
     <a class="lnk active" href="messages.html">Messages</a>
     <a class="lnk" href="giving.html">Giving</a>
-    <a class="lnk" href="contact.html">Contact</a>
-    <a class="btn btn-orange" href="contact.html#visit">Plan a Visit</a>
+    <a class="lnk" href="index.html#prayer">Daily Prayer</a>
+    <a class="btn btn-orange" href="index.html#visit">Plan a Visit</a>
   </nav>
   <a class="btn btn-ghost menu-btn" onclick="openM()">Menu</a>
 </header>
@@ -33,8 +34,8 @@
   <a href="index.html#services">Services</a>
   <a href="messages.html">Messages</a>
   <a href="giving.html">Giving</a>
-  <a href="contact.html">Contact</a>
-  <a href="contact.html#visit">Plan a Visit</a>
+  <a href="index.html#prayer">Daily Prayer</a>
+  <a href="index.html#visit">Plan a Visit</a>
 </div>
 
 <!-- PAGE HERO -->
@@ -57,7 +58,7 @@
   <div class="wrap">
     <div class="msg-grid">
       <div class="video-ph reveal">
-        <div class="note">🎬 VIDEO GOES HERE, featured / latest message embed</div>
+        <div class="note"><i class="fa-solid fa-video"></i> VIDEO GOES HERE, featured / latest message embed</div>
         <button class="play" data-video aria-label="Play latest message">
           <svg width="30" height="34" viewBox="0 0 30 34" fill="#fff"><path d="M0 0l30 17L0 34z"/></svg>
         </button>
@@ -102,7 +103,7 @@
         <div class="meta"><div class="tag">Video · Bible Study</div><h3>Ministers, Not Spectators</h3><div class="sub">Pastor Chibuotu Amadi · Sample date</div></div>
       </a>
       <a class="msg-card reveal" data-type="audio" data-link="telegram">
-        <div class="thumb v3"><span class="pp">✈</span><span class="dur">Audio</span></div>
+        <div class="thumb v3"><span class="pp"><i class="fa-brands fa-telegram"></i></span><span class="dur">Audio</span></div>
         <div class="meta"><div class="tag">Audio · Telegram</div><h3>Disciple the Nations</h3><div class="sub">Daily Devotional · Sample date</div></div>
       </a>
       <a class="msg-card reveal" data-type="video" data-video>
@@ -110,7 +111,7 @@
         <div class="meta"><div class="tag">Video · Sunday Service</div><h3>Filled With His Glory</h3><div class="sub">Pastor Anthonia Amadi · Sample date</div></div>
       </a>
       <a class="msg-card reveal" data-type="audio" data-link="telegram">
-        <div class="thumb v3"><span class="pp">✈</span><span class="dur">Audio</span></div>
+        <div class="thumb v3"><span class="pp"><i class="fa-brands fa-telegram"></i></span><span class="dur">Audio</span></div>
         <div class="meta"><div class="tag">Audio · Telegram</div><h3>Morning Fire, Prayer</h3><div class="sub">5-6 AM Daily · Sample date</div></div>
       </a>
       <a class="msg-card reveal" data-type="video" data-video>
@@ -119,8 +120,8 @@
       </a>
     </div>
     <div style="text-align:center;margin-top:56px" class="reveal">
-      <a class="btn btn-orange" data-link="youtube">More on YouTube ▸</a>
-      <a class="btn btn-ghost" data-link="telegram">More on Telegram ▸</a>
+      <a class="btn btn-orange" data-link="youtube">More on YouTube <i class="fa-solid fa-arrow-right"></i></a>
+      <a class="btn btn-ghost" data-link="telegram">More on Telegram <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -135,10 +136,10 @@
         </a>
         <p>Raising ministers, not spectators, carrying the fire of God from one life to another, one city at a time.</p>
         <div class="socials">
-          <a data-link="instagram" aria-label="Instagram">◎</a>
-          <a data-link="youtube" aria-label="YouTube">▸</a>
-          <a data-link="telegram" aria-label="Telegram">✈</a>
-          <a data-link="x" aria-label="X">✕</a>
+          <a data-link="instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a data-link="youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a data-link="telegram" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a data-link="x" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
       </div>
       <div><h5>Explore</h5><ul>
@@ -151,13 +152,13 @@
         <li><a href="index.html#services">Sunday · 7:30 &amp; 10 AM</a></li>
         <li><a href="index.html#services">Wednesday · 5:30 PM</a></li>
         <li><a data-link="telegram">Telegram · 5-6 AM Daily</a></li>
-        <li><a href="contact.html#visit">Plan a Visit</a></li>
+        <li><a href="index.html#visit">Plan a Visit</a></li>
       </ul></div>
       <div><h5>Find Us</h5><ul>
         <li><a data-link="map">Opposite Gate 5,</a></li>
         <li><a data-link="map">Adamasingba, Ibadan,</a></li>
         <li><a data-link="map">Oyo State, Nigeria</a></li>
-        <li><a data-link="directions">Get Directions ▸</a></li>
+        <li><a data-link="directions">Get Directions <i class="fa-solid fa-arrow-right"></i></a></li>
       </ul></div>
     </div>
     <div class="foot-bottom">

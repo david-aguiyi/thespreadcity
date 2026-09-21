@@ -113,34 +113,40 @@ fitHero();
 function fitBelief(){
   const roller = document.querySelector('.belief-roller');
   if(!roller) return;
-  const items = [...roller.querySelectorAll('.roller-track li')];
-  if(!items.length) return;
+  const lns = [...roller.querySelectorAll('.roller-track li .ln')];
+  if(!lns.length) return;
   const avail = roller.clientWidth - 24;      // li has 12px padding each side
   if(avail <= 0) return;
-  const REF = 100;
-  let minFont = Infinity;
-  items.forEach(li => {
-    const ln = li.querySelector('.ln');
-    if(!ln) return;
-    const p = { pos: ln.style.position, w: ln.style.width, vis: ln.style.visibility, fs: li.style.fontSize };
-    li.style.fontSize = REF + 'px';
-    ln.style.position = 'absolute';           // out of the flex flow so it can't shrink
-    ln.style.width = 'max-content';           // with <br>, this = the widest of the 2 lines
-    ln.style.visibility = 'hidden';
-    const widest = ln.getBoundingClientRect().width;
-    ln.style.position = p.pos; ln.style.width = p.w; ln.style.visibility = p.vis; li.style.fontSize = p.fs;
-    if(widest > 0) minFont = Math.min(minFont, REF * (avail / widest));
+  const REF = 100, LS = 0.015;                // reference px, letter-spacing (em)
+  const ctx = fitBelief._ctx || (fitBelief._ctx = document.createElement('canvas').getContext('2d'));
+  ctx.font = '400 ' + REF + "px Anton, sans-serif";
+  let widest = 0;                             // widest single line across every statement, at REF px
+  lns.forEach(ln => {
+    ln.innerHTML.split(/<br\s*\/?>/i).forEach(part => {
+      const tmp = document.createElement('div');
+      tmp.innerHTML = part;
+      const line = (tmp.textContent || '').trim().toUpperCase();
+      if(!line) return;
+      const w = ctx.measureText(line).width + LS * REF * Math.max(0, line.length - 1);
+      if(w > widest) widest = w;
+    });
   });
-  if(minFont === Infinity) return;
-  minFont = Math.max(24, Math.min(minFont, 88));
-  roller.style.setProperty('--bfs', minFont + 'px');
+  if(!widest) return;
+  let target = REF * (avail / widest) * 0.98; // fill width, tiny safety
+  target = Math.max(24, Math.min(target, 88));
+  roller.style.setProperty('--bfs', target + 'px');
 }
-addEventListener('resize', fitBelief);
-addEventListener('orientationchange', fitBelief);
-addEventListener('load', fitBelief);
-if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitBelief);
-setTimeout(fitBelief, 300);
-fitBelief();
+function fitAll(){ fitHero(); fitBelief(); }
+['resize','orientationchange','load','pageshow'].forEach(ev => addEventListener(ev, fitAll));
+// wait for the display font (Anton) before measuring so text widths are accurate
+if(document.fonts && document.fonts.load){
+  Promise.all([
+    document.fonts.load("400 40px 'Anton'"),
+    document.fonts.load("700 40px 'Manrope'")
+  ]).then(fitAll).catch(fitAll);
+}
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
+[0, 150, 500, 1000, 1800].forEach(t => setTimeout(fitAll, t));  // re-fit until the font has settled
 
 /* ---- Belief: center-emphasized vertical carousel (steps up one statement at a time) ---- */
 (function(){
@@ -150,7 +156,7 @@ fitBelief();
   const items = [...track.children];
   const N = items.length / 2;                 // list is duplicated in the HTML
   const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
-  const EASE = 'transform .85s cubic-bezier(.16,1,.3,1)';
+  const EASE = 'transform .9s cubic-bezier(.22,1,.36,1)';
   let a = 1;                                   // index of the centred (active) item
 
   const slot = () => roller.clientHeight / 3;
