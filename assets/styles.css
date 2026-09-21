@@ -252,13 +252,14 @@ footer .logo .logo-img{height:42px}
   height:clamp(420px,62vh,640px);max-width:var(--maxw);margin:0 auto;padding:0 40px}
 .gtile{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);transition:transform .5s var(--ease)}
 .gtile:hover{transform:translateY(-6px)}
-.gtile::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(5,6,10,.05),rgba(5,6,10,.55))}
-.gtile .lbl{position:absolute;top:14px;left:14px;z-index:3;font-family:'Manrope',sans-serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.72);border:1px dashed rgba(255,255,255,.32);padding:5px 9px;border-radius:6px}
-.gtile .ico{position:absolute;inset:0;z-index:2;display:grid;place-items:center;font-size:2.6rem;opacity:.6}
-.g-a{grid-column:1;grid-row:1 / span 2;background:linear-gradient(160deg,#0a1c4d,#06102b)}
-.g-b{grid-column:2;grid-row:1;background:linear-gradient(160deg,#141a2e,#0a0c12)}
-.g-c{grid-column:2;grid-row:2;background:linear-gradient(160deg,#3a1b06,#160a04)}
-.g-d{grid-column:3;grid-row:1 / span 2;background:radial-gradient(80% 70% at 50% 20%,rgba(30,107,255,.35),transparent 60%),linear-gradient(160deg,#0a1c4d,#06102b)}
+.gtile::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(5,6,10,.05),rgba(5,6,10,.5))}
+.gtile .lbl{position:absolute;top:14px;left:14px;z-index:3;font-family:'Manrope',sans-serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8);border:1px dashed rgba(255,255,255,.4);padding:5px 9px;border-radius:6px;background:rgba(5,6,10,.35)}
+.gtile .ico{display:none}
+.gtile{background-size:cover;background-position:center;background-repeat:no-repeat}
+.g-a{grid-column:1;grid-row:1 / span 2;background-color:#06102b;background-image:url('hero.svg')}
+.g-b{grid-column:2;grid-row:1;background-color:#0a0c12;background-image:url('sunday.svg')}
+.g-c{grid-column:2;grid-row:2;background-color:#160a04;background-image:url('bible.svg')}
+.g-d{grid-column:3;grid-row:1 / span 2;background-color:#06102b;background-image:url('spread.svg')}
 
 /* ---------- Community / Telegram ---------- */
 .community{background:var(--orange);color:#fff;padding:130px 0;overflow:hidden}
@@ -379,4 +380,6 @@ footer a:hover{color:var(--orange)}
   .g-a,.g-b,.g-c,.g-d{grid-column:1;grid-row:auto;min-height:230px}
   .svc,.form{padding:30px}
   .hero{padding-bottom:12vh}
+  .hero .wrap{padding-left:8px;padding-right:8px}   /* let the tagline grow as big as possible */
+  .hero h1{letter-spacing:-.025em}
 }

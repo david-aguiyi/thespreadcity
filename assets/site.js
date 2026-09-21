@@ -71,6 +71,14 @@ document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDel
 /* ---- Mobile menu ---- */
 function openM(){ document.getElementById('mnav').classList.add('open'); }
 function closeM(){ document.getElementById('mnav').classList.remove('open'); }
+(function(){
+  const mnav = document.getElementById('mnav');
+  if(!mnav) return;
+  // click on the backdrop (not a link) closes the menu
+  mnav.addEventListener('click', (e) => { if(e.target === mnav) closeM(); });
+  // Esc closes it too
+  addEventListener('keydown', (e) => { if(e.key === 'Escape') closeM(); });
+})();
 
 /* ---- Fit the hero headline: as large as possible without spilling over ---- */
 function fitHero(){
@@ -78,16 +86,27 @@ function fitHero(){
   if(!h1) return;
   h1.style.fontSize = '';                     // back to CSS base
   const box = h1.clientWidth;                 // available width
+  if(!box) return;
   const cur = parseFloat(getComputedStyle(h1).fontSize) || 48;
-  const line = h1.scrollWidth;                // widest line (white-space:nowrap)
-  if(!line) return;
-  let target = cur * (box / line) * 0.99;     // scale to fill, tiny safety margin
-  target = Math.max(22, Math.min(target, 140));
+  // measure the WIDEST line at the current font (shrink h1 to its content width)
+  const dPrev = h1.style.display, wPrev = h1.style.width;
+  h1.style.display = 'inline-block';
+  h1.style.width = 'max-content';
+  const widest = h1.getBoundingClientRect().width;
+  h1.style.display = dPrev;
+  h1.style.width = wPrev;
+  if(!widest) return;
+  let target = cur * ((box - 1) / widest);    // scale so the widest line fills the width
+  target = Math.max(22, Math.min(target, 160));
   h1.style.fontSize = target + 'px';
 }
 addEventListener('resize', fitHero);
+addEventListener('orientationchange', fitHero);
 addEventListener('load', fitHero);
+addEventListener('pageshow', fitHero);
 if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitHero);
+requestAnimationFrame(fitHero);
+setTimeout(fitHero, 300);
 fitHero();
 
 /* ---- Belief: center-emphasized vertical carousel (steps up one statement at a time) ---- */
