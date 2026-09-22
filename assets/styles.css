@@ -256,12 +256,12 @@ footer .logo .logo-img{height:42px}
 .gtile:hover{}
 .gtile::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(5,6,10,.04),rgba(5,6,10,.45))}
 .gtile .lbl{position:absolute;top:14px;left:14px;z-index:3;font-family:'Manrope',sans-serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8);border:1px dashed rgba(255,255,255,.4);padding:5px 9px;border-radius:6px;background:rgba(5,6,10,.35)}
-.gtile .ico{display:none}
-.gtile{background-size:cover;background-position:center;background-repeat:no-repeat}
-.g-a{grid-column:1;grid-row:1 / span 2;background-color:#06102b;background-image:url('hero.svg')}
-.g-b{grid-column:2;grid-row:1;background-color:#0a0c12;background-image:url('sunday.svg')}
-.g-c{grid-column:2;grid-row:2;background-color:#160a04;background-image:url('bible.svg')}
-.g-d{grid-column:3;grid-row:1 / span 2;background-color:#06102b;background-image:url('spread.svg')}
+.gtile .ico,.gtile .lbl{display:none}
+.gtile{background-color:#0a0c12;background-size:cover;background-position:center;background-repeat:no-repeat}
+.g-a{grid-column:1;grid-row:1 / span 2;background-image:url('gallery/preach.jpg')}
+.g-b{grid-column:2;grid-row:1;background-image:url('gallery/crowd.webp')}
+.g-c{grid-column:2;grid-row:2;background-image:url('gallery/pray.webp')}
+.g-d{grid-column:3;grid-row:1 / span 2;background-image:url('gallery/preach.jpg');background-position:center 20%}
 
 /* ---------- Community / Telegram ---------- */
 .community{background:var(--orange);color:#fff;padding:130px 0;overflow:hidden}
