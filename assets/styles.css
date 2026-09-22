@@ -34,7 +34,7 @@ section{position:relative}
 /* ---------- Buttons ---------- */
 .btn{
   display:inline-flex;align-items:center;gap:10px;
-  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.82rem;
+  font-family:'Manrope',sans-serif;font-weight:600;font-size:.82rem;
   letter-spacing:.14em;text-transform:uppercase;
   padding:16px 30px;border-radius:100px;border:1.5px solid transparent;
   transition:transform .4s var(--ease),background .3s,color .3s,border-color .3s;
@@ -55,7 +55,7 @@ header{
   padding:22px 40px;transition:background .4s,padding .4s,backdrop-filter .4s;
 }
 header.scrolled,header.solid{background:rgba(5,6,10,.82);backdrop-filter:blur(14px);padding:14px 40px;border-bottom:1px solid var(--line)}
-.logo{display:flex;align-items:center;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.02em}
+.logo{display:flex;align-items:center;gap:12px;font-family:'Manrope',sans-serif;font-weight:700;letter-spacing:.02em}
 .logo .logo-img{height:38px;width:auto;display:block}
 header.scrolled .logo .logo-img,header.solid .logo .logo-img{height:34px}
 footer .logo .logo-img{height:42px}
@@ -64,7 +64,7 @@ footer .logo .logo-img{height:42px}
 .logo b{font-size:1.05rem;line-height:1;display:block}
 .logo span{font-size:.62rem;letter-spacing:.34em;color:var(--grey);text-transform:uppercase}
 .nav-desk{display:flex;align-items:center;gap:34px}
-.nav-desk a.lnk{font-family:'Space Grotesk',sans-serif;font-size:.82rem;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.82);text-transform:uppercase;transition:color .25s}
+.nav-desk a.lnk{font-family:'Manrope',sans-serif;font-size:.82rem;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.82);text-transform:uppercase;transition:color .25s}
 .nav-desk a.lnk:hover,.nav-desk a.lnk.active{color:var(--orange)}
 .menu-btn{display:none}
 
@@ -85,7 +85,7 @@ footer .logo .logo-img{height:42px}
 .hero h1 .o{color:var(--orange)}
 .hero-sub{max-width:480px;font-size:.95rem;font-weight:400;line-height:1.65;letter-spacing:.005em;color:rgba(255,255,255,.78);margin-bottom:34px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-.scroll-hint{position:absolute;right:40px;bottom:40px;z-index:4;writing-mode:vertical-rl;font-family:'Space Grotesk',sans-serif;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:14px}
+.scroll-hint{position:absolute;right:40px;bottom:40px;z-index:4;writing-mode:vertical-rl;font-family:'Manrope',sans-serif;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:14px}
 .scroll-hint::after{content:"";width:1px;height:60px;background:linear-gradient(var(--orange),transparent)}
 
 /* ---------- Page hero (inner pages) ---------- */
@@ -97,7 +97,7 @@ footer .logo .logo-img{height:42px}
 .page-hero h1{font-size:clamp(3rem,9vw,7rem);margin:14px 0 20px}
 .page-hero h1 .o{color:var(--orange)}
 .page-hero p{max-width:520px;font-size:1rem;font-weight:400;line-height:1.7;color:rgba(255,255,255,.78)}
-.crumb{font-family:'Space Grotesk',sans-serif;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+.crumb{font-family:'Manrope',sans-serif;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
 .crumb a:hover{color:var(--orange)}
 
 /* ---------- Marquee ---------- */
@@ -114,7 +114,7 @@ footer .logo .logo-img{height:42px}
 /* ---------- Welcome / Mission ---------- */
 .mission{padding:130px 0}
 .mission .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
-.mission h2{font-size:clamp(2.2rem,4.4vw,3.9rem);line-height:1.02;letter-spacing:-.01em;font-family:'Space Grotesk',sans-serif;font-weight:700}
+.mission h2{font-size:clamp(2.2rem,4.4vw,3.9rem);line-height:1.02;letter-spacing:-.01em;font-family:'Manrope',sans-serif;font-weight:700}
 .mission h2 em{font-style:normal;color:var(--blue-glow)}
 .mission .body p{font-size:1.02rem;font-weight:400;line-height:1.7;color:rgba(255,255,255,.78);margin-bottom:22px}
 .mission .body p .hl{color:#fff;font-weight:600}
@@ -164,7 +164,7 @@ footer .logo .logo-img{height:42px}
 .pillars-band{background:var(--blue);padding:0 0 130px;margin-top:-20px}
 .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .pillar{border-top:2px solid rgba(255,255,255,.4);padding-top:20px;text-align:left}
-.pillar h4{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;margin-bottom:8px;color:#fff}
+.pillar h4{font-family:'Manrope',sans-serif;font-size:1.15rem;margin-bottom:8px;color:#fff}
 .pillar p{font-size:.92rem;font-weight:400;color:rgba(255,255,255,.82)}
 
 /* ---------- Services ---------- */
@@ -181,9 +181,9 @@ footer .logo .logo-img{height:42px}
 .svc.b::after{background-image:url('bible.svg')}
 .svc::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(5,6,10,.15),rgba(5,6,10,.8))}
 .svc>*{position:relative;z-index:2}
-.svc .kicker{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:.2em;font-size:.72rem;text-transform:uppercase;color:var(--orange)}
+.svc .kicker{font-family:'Manrope',sans-serif;font-weight:600;letter-spacing:.2em;font-size:.72rem;text-transform:uppercase;color:var(--orange)}
 .svc h3{font-family:'Anton',sans-serif;font-size:2.6rem;text-transform:uppercase;line-height:.95;margin:14px 0 10px}
-.svc .when{font-size:1.35rem;font-weight:600;font-family:'Space Grotesk',sans-serif}
+.svc .when{font-size:1.35rem;font-weight:600;font-family:'Manrope',sans-serif}
 .svc .loc{color:var(--grey);font-size:.95rem;margin-top:6px;display:flex;align-items:center;gap:8px}
 .svc .foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:26px}
 .svc .arrow{width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);display:grid;place-items:center;transition:.3s}
@@ -197,12 +197,12 @@ footer .logo .logo-img{height:42px}
     radial-gradient(90% 90% at 30% 20%, rgba(30,107,255,.4), transparent 60%),
     linear-gradient(160deg,#0c1330,#070912);
   display:grid;place-items:center}
-.video-ph .note{position:absolute;top:16px;left:16px;font-family:'Space Grotesk',sans-serif;font-size:.62rem;letter-spacing:.15em;color:rgba(255,255,255,.55);text-transform:uppercase;border:1px dashed rgba(255,255,255,.3);padding:6px 11px;border-radius:6px;z-index:3}
+.video-ph .note{position:absolute;top:16px;left:16px;font-family:'Manrope',sans-serif;font-size:.62rem;letter-spacing:.15em;color:rgba(255,255,255,.55);text-transform:uppercase;border:1px dashed rgba(255,255,255,.3);padding:6px 11px;border-radius:6px;z-index:3}
 .play{width:96px;height:96px;border-radius:50%;background:var(--orange);display:grid;place-items:center;box-shadow:0 0 0 0 rgba(255,90,0,.5);animation:pulse 2.6s infinite;cursor:pointer;border:none}
 .play svg{margin-left:5px}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,90,0,.5)}70%{box-shadow:0 0 0 32px rgba(255,90,0,0)}100%{box-shadow:0 0 0 0 rgba(255,90,0,0)}}
 .video-ph .cap{position:absolute;bottom:26px;left:30px;right:30px}
-.video-ph .cap h3{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700}
+.video-ph .cap h3{font-family:'Manrope',sans-serif;font-size:1.5rem;font-weight:700}
 .video-ph .cap p{color:rgba(255,255,255,.7)}
 .audio-card{border-radius:22px;border:1px solid var(--line);background:#0a0c12;padding:40px;display:flex;flex-direction:column;justify-content:space-between}
 .audio-card .kicker{color:var(--blue-glow)}
@@ -213,7 +213,7 @@ footer .logo .logo-img{height:42px}
 
 /* ---------- Messages archive page ---------- */
 .filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin:40px 0 10px}
-.chip{font-family:'Space Grotesk',sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:10px 20px;border-radius:100px;border:1px solid var(--line);color:rgba(255,255,255,.7);cursor:pointer;transition:.25s}
+.chip{font-family:'Manrope',sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:10px 20px;border-radius:100px;border:1px solid var(--line);color:rgba(255,255,255,.7);cursor:pointer;transition:.25s}
 .chip.on,.chip:hover{background:var(--blue);border-color:var(--blue);color:#fff}
 .msg-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:34px}
 .msg-card{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#0a0c12;transition:transform .5s var(--ease)}
@@ -224,10 +224,10 @@ footer .logo .logo-img{height:42px}
 .msg-card .thumb.v3{background-image:url('spread.svg');background-color:#0a1230}
 .msg-card .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,6,10,.1),rgba(5,6,10,.65))}
 .msg-card .thumb .pp{position:relative;z-index:2;width:60px;height:60px;border-radius:50%;background:var(--orange);display:grid;place-items:center}
-.msg-card .thumb .dur{position:absolute;bottom:12px;right:12px;z-index:2;font-family:'Space Grotesk',sans-serif;font-size:.72rem;background:rgba(5,6,10,.75);padding:4px 10px;border-radius:6px}
+.msg-card .thumb .dur{position:absolute;bottom:12px;right:12px;z-index:2;font-family:'Manrope',sans-serif;font-size:.72rem;background:rgba(5,6,10,.75);padding:4px 10px;border-radius:6px}
 .msg-card .meta{padding:24px}
-.msg-card .tag{font-family:'Space Grotesk',sans-serif;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
-.msg-card h3{font-family:'Space Grotesk',sans-serif;font-size:1.25rem;font-weight:700;margin:8px 0 6px}
+.msg-card .tag{font-family:'Manrope',sans-serif;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
+.msg-card h3{font-family:'Manrope',sans-serif;font-size:1.25rem;font-weight:700;margin:8px 0 6px}
 .msg-card .sub{color:var(--grey);font-size:.9rem}
 
 /* ---------- Leadership ---------- */
@@ -241,8 +241,8 @@ footer .logo .logo-img{height:42px}
 .leader .portrait.pb{background-image:url('pastor-2.svg')}
 .leader .portrait .badge{position:absolute;left:24px;bottom:22px;z-index:2;font-family:'Anton',sans-serif;font-size:1.4rem;letter-spacing:.05em;color:#fff;opacity:.9}
 .leader .info{padding:32px}
-.leader .role{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:.16em;font-size:.72rem;text-transform:uppercase;color:var(--orange)}
-.leader h3{font-family:'Space Grotesk',sans-serif;font-size:1.7rem;font-weight:700;margin:8px 0 12px}
+.leader .role{font-family:'Manrope',sans-serif;font-weight:600;letter-spacing:.16em;font-size:.72rem;text-transform:uppercase;color:var(--orange)}
+.leader h3{font-family:'Manrope',sans-serif;font-size:1.7rem;font-weight:700;margin:8px 0 12px}
 .leader p{color:rgba(255,255,255,.72);font-size:.98rem}
 
 /* ---------- Gallery / Life collage ---------- */
@@ -270,7 +270,7 @@ footer .logo .logo-img{height:42px}
 .community h2{font-size:clamp(2.4rem,6vw,5rem)}
 .community p{font-size:1.15rem;max-width:520px;margin:22px 0 32px;color:rgba(255,255,255,.94)}
 .community .clock{font-family:'Anton',sans-serif;font-size:clamp(3rem,9vw,8rem);line-height:.9;text-align:right;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.9)}
-.community .clock small{display:block;font-family:'Space Grotesk',sans-serif;font-size:1rem;-webkit-text-stroke:0;color:#fff;letter-spacing:.2em;margin-top:14px;font-weight:600}
+.community .clock small{display:block;font-family:'Manrope',sans-serif;font-size:1rem;-webkit-text-stroke:0;color:#fff;letter-spacing:.2em;margin-top:14px;font-weight:600}
 
 /* ---------- Testimonies ---------- */
 .testi{padding:140px 0}
@@ -280,13 +280,13 @@ footer .logo .logo-img{height:42px}
 .quote p{color:rgba(255,255,255,.85);font-size:1.02rem;margin:10px 0 22px}
 .quote .who{display:flex;align-items:center;gap:12px}
 .quote .who .dot{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--orange),#ff8a3d);display:grid;place-items:center;font-weight:700}
-.quote .who b{font-family:'Space Grotesk',sans-serif;font-size:.95rem}
+.quote .who b{font-family:'Manrope',sans-serif;font-size:.95rem}
 .quote .who span{display:block;color:var(--grey);font-size:.8rem}
 
 /* ---------- Giving page ---------- */
 .give-why{padding:120px 0}
 .give-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.give-grid h2{font-size:clamp(2.2rem,5vw,4rem);font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1.05}
+.give-grid h2{font-size:clamp(2.2rem,5vw,4rem);font-family:'Manrope',sans-serif;font-weight:700;line-height:1.05}
 .give-grid p{color:rgba(255,255,255,.8);font-size:1.1rem;margin-top:22px}
 .verse{border-left:3px solid var(--orange);padding:6px 0 6px 24px;margin-top:30px;font-size:1.15rem;color:#fff;font-style:italic}
 .give-ways{padding:40px 0 130px}
@@ -295,12 +295,12 @@ footer .logo .logo-img{height:42px}
 .way.feature{background:linear-gradient(160deg,#0a1c4d,#06102b);border-color:rgba(61,123,255,.4)}
 .way .ic{width:56px;height:56px;border-radius:14px;background:rgba(61,123,255,.16);display:grid;place-items:center;font-size:1.5rem;margin-bottom:20px}
 .way.feature .ic{background:var(--orange)}
-.way h3{font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:700;margin-bottom:12px}
+.way h3{font-family:'Manrope',sans-serif;font-size:1.35rem;font-weight:700;margin-bottom:12px}
 .way .rows{margin-top:16px}
 .way .row{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-top:1px solid var(--line);font-size:.95rem}
 .way .row span{color:var(--grey)}
-.way .row b{font-family:'Space Grotesk',sans-serif;font-weight:600;text-align:right}
-.todo{display:inline-block;margin-top:8px;font-family:'Space Grotesk',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);border:1px dashed rgba(255,90,0,.5);padding:4px 9px;border-radius:6px}
+.way .row b{font-family:'Manrope',sans-serif;font-weight:600;text-align:right}
+.todo{display:inline-block;margin-top:8px;font-family:'Manrope',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);border:1px dashed rgba(255,90,0,.5);padding:4px 9px;border-radius:6px}
 .link-missing{position:relative}
 .link-missing::after{content:"◔";margin-left:6px;font-size:.8em;opacity:.7}
 
@@ -308,17 +308,17 @@ footer .logo .logo-img{height:42px}
 .contact-wrap{padding:110px 0 130px}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .info-block{margin-bottom:34px}
-.info-block .lbl{font-family:'Space Grotesk',sans-serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+.info-block .lbl{font-family:'Manrope',sans-serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
 .info-block .val{font-size:1.2rem;font-weight:500}
 .info-block .val a:hover{color:var(--blue-glow)}
 .map-embed{position:relative;height:280px;border-radius:18px;overflow:hidden;border:1px solid var(--line);margin-top:24px;
   background:radial-gradient(70% 90% at 50% 20%, rgba(30,107,255,.35),transparent 60%),linear-gradient(160deg,#0c1330,#070912);display:grid;place-items:center}
-.map-embed .note{position:absolute;top:12px;left:12px;font-family:'Space Grotesk',sans-serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);border:1px dashed rgba(255,255,255,.3);padding:5px 9px;border-radius:6px}
+.map-embed .note{position:absolute;top:12px;left:12px;font-family:'Manrope',sans-serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);border:1px dashed rgba(255,255,255,.3);padding:5px 9px;border-radius:6px}
 .form{border-radius:22px;border:1px solid var(--line);background:#0a0c12;padding:44px}
-.form h3{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;margin-bottom:6px}
+.form h3{font-family:'Manrope',sans-serif;font-size:1.6rem;font-weight:700;margin-bottom:6px}
 .form .hint{color:var(--grey);font-size:.9rem;margin-bottom:24px}
 .field{margin-bottom:18px}
-.field label{display:block;font-family:'Space Grotesk',sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-bottom:8px}
+.field label{display:block;font-family:'Manrope',sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-bottom:8px}
 .field input,.field textarea,.field select{width:100%;background:#05060a;border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:#fff;font-family:'Manrope',sans-serif;font-size:1rem;transition:border-color .25s}
 .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--blue-glow)}
 .field textarea{resize:vertical;min-height:120px}
@@ -335,7 +335,7 @@ footer .logo .logo-img{height:42px}
 /* ---------- Footer ---------- */
 footer{background:#04050a;border-top:1px solid var(--line);padding:80px 0 40px}
 .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
-footer h5{font-family:'Space Grotesk',sans-serif;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);margin-bottom:20px}
+footer h5{font-family:'Manrope',sans-serif;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);margin-bottom:20px}
 footer ul{list-style:none}
 footer li{margin-bottom:12px}
 footer a{color:rgba(255,255,255,.78);font-size:.95rem;transition:color .25s}
