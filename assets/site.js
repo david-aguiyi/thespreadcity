@@ -97,7 +97,7 @@ function fitHero(){
   h1.style.width = wPrev;
   if(!widest) return;
   let target = cur * ((box - 1) / widest);    // scale so the widest line fills the width
-  target = Math.max(22, Math.min(target, 160));
+  target = Math.max(22, Math.min(target, 104)); // cap so it never overwhelms large screens
   h1.style.fontSize = target + 'px';
 }
 addEventListener('resize', fitHero);
