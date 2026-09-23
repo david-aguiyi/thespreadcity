@@ -142,6 +142,7 @@ function fitAll(){ fitHero(); fitBelief(); }
 if(document.fonts && document.fonts.load){
   Promise.all([
     document.fonts.load("400 40px 'Anton'"),
+    document.fonts.load("800 40px 'Baloo 2'"),
     document.fonts.load("700 40px 'Manrope'")
   ]).then(fitAll).catch(fitAll);
 }
