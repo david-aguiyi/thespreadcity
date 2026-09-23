@@ -261,7 +261,7 @@ footer .logo .logo-img{height:66px}
 .g-a{grid-column:1;grid-row:1 / span 2;background-image:url('gallery/worship.webp');background-position:38% 30%}
 .g-b{grid-column:2;grid-row:1;background-image:url('gallery/crowd.webp');background-position:52% 32%}
 .g-c{grid-column:2;grid-row:2;background-image:url('gallery/pray.webp');background-position:50% 28%}
-.g-d{grid-column:3;grid-row:1 / span 2;background-image:url('gallery/preach.jpg');background-position:50% 22%}
+.g-d{grid-column:3;grid-row:1 / span 2;background-image:url('gallery/congregation.webp');background-position:52% 35%}
 
 /* ---------- Community / Telegram ---------- */
 .community{background:var(--orange);color:#fff;padding:130px 0;overflow:hidden}
