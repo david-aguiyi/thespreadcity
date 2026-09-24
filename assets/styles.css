@@ -157,6 +157,8 @@ footer .logo .logo-img{height:66px}
   will-change:transform,opacity;backface-visibility:hidden}
 .roller-track li .ln{display:block;text-align:center}
 .roller-track li.active{opacity:1;transform:scale(1)}
+/* smaller shadow statements on desktop (the centre column is wide there) */
+@media(min-width:961px){.roller-track li{transform:scale(.38)}}
 .roller-track li .circ{position:relative;white-space:nowrap;display:inline-block}
 /* hand-drawn orange circle around the emphatic word — only on the active statement */
 .roller-track li .circ::after{content:"";position:absolute;left:-11%;top:-18%;width:122%;height:136%;pointer-events:none;
