@@ -141,8 +141,7 @@ footer .logo .logo-img{height:78px}
 
 /* ---------- Belief (blue block, centered serif statement) ---------- */
 .belief{background:var(--blue);padding:120px 0 130px;overflow:hidden;text-align:center}
-.belief::before{content:"";position:absolute;top:-25%;right:-8%;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(255,90,0,.5),transparent 65%);filter:blur(20px)}
-.belief .globe{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:760px;height:760px;background:url('spread.svg') center/contain no-repeat;opacity:.16;z-index:0;pointer-events:none;animation:spin 90s linear infinite}
+.belief .globe{display:none}
 @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
 .belief-eyebrow{position:relative;z-index:2;font-family:'Manrope',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.24em;text-transform:uppercase;color:#fff;opacity:.9;margin-bottom:70px}
 .belief-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.9fr 1fr;gap:50px;align-items:center}
