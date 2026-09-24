@@ -232,7 +232,7 @@ footer .logo .logo-img{height:78px}
 .msg-feature{display:grid;grid-template-columns:1fr 1.05fr;gap:0;align-items:start}
 .msg-left p{color:rgba(255,255,255,.8);max-width:380px;line-height:1.7;margin-bottom:28px}
 /* on bigger screens pull the figure left so it meets the links, caption stays bottom-right */
-@media(min-width:961px){.msg-img{background-position:-14% top}.msg-cap{right:20px;left:auto}}
+@media(min-width:961px){.msg-img{background-position:-32% top}.msg-cap{right:20px;left:auto}}
 .stream{list-style:none}
 .stream li{border-top:1px solid var(--line)}
 .stream li:last-child{border-bottom:1px solid var(--line)}
@@ -240,10 +240,11 @@ footer .logo .logo-img{height:78px}
   font-family:'Manrope',sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;
   color:rgba(255,255,255,.9);transition:color .25s,padding .25s}
 .dz{transform:rotate(-45deg)}          /* arrow-right rendered as a diagonal ↗ */
-.stream a i{color:var(--orange);transition:transform .25s}
+.stream a i{color:#fff;opacity:.5;font-size:1.15em;font-weight:300;transition:transform .25s,opacity .25s}
+.stream a:hover i{opacity:1}
 .stream a:hover{color:var(--orange);padding-left:12px}
 .stream a:hover i.dz{transform:rotate(-45deg) translate(4px,-2px)}
-.msg-video{position:relative;margin-top:28px;min-height:clamp(460px,56vh,660px);cursor:pointer}
+.msg-video{position:relative;margin-top:28px;min-height:clamp(560px,68vh,800px);cursor:pointer}
 .msg-img{position:absolute;inset:0;background:transparent url('gallery/preach-cut.webp') center top/contain no-repeat}
 .play-yt{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3;
   width:80px;height:57px;border-radius:15px;background:#ff2b2b;display:grid;place-items:center;
@@ -310,7 +311,7 @@ footer .logo .logo-img{height:78px}
 .community .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
 .community h2{font-size:clamp(2.4rem,6vw,5rem)}
 .community p{font-size:1.15rem;max-width:520px;margin:22px 0 32px;color:rgba(255,255,255,.94)}
-.community .clock{font-family:'Anton',sans-serif;font-size:clamp(2.3rem,6vw,4.8rem);line-height:1;white-space:nowrap;text-align:right;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.85)}
+.community .clock{font-family:'Anton',sans-serif;font-size:clamp(3rem,7.5vw,6.2rem);line-height:1;white-space:nowrap;text-align:right;color:transparent;-webkit-text-stroke:1.8px rgba(255,255,255,.9)}
 .community .clock small{display:block;font-family:'Manrope',sans-serif;font-size:.85rem;-webkit-text-stroke:0;color:#fff;letter-spacing:.16em;margin-top:12px;font-weight:600}
 
 /* ---------- Testimonies ---------- */
