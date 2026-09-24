@@ -245,11 +245,10 @@ footer .logo .logo-img{height:78px}
 .stream li{border-top:1px solid var(--line)}
 .stream li:last-child{border-bottom:1px solid var(--line)}
 .stream a{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 2px;cursor:pointer;
-  font-family:'Manrope',sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;
-  color:rgba(255,255,255,.9);transition:color .25s,padding .25s}
-.dz{transform:rotate(-45deg)}          /* arrow-right rendered as a diagonal ↗ */
-.stream a i{color:#fff;opacity:.5;font-size:1.15em;font-weight:300;transition:transform .25s,opacity .25s}
-.stream a:hover i{opacity:1}
+  font-family:'Manrope',sans-serif;font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;
+  color:rgba(255,255,255,.85);transition:color .25s,padding .25s}
+.sarrow{width:1.55em;height:1.55em;flex:none;color:#fff;opacity:.55;transition:transform .25s,opacity .25s}
+.stream a:hover .sarrow{opacity:1;transform:translate(3px,-3px)}
 .stream a:hover{color:var(--orange);padding-left:12px}
 .stream a:hover i.dz{transform:rotate(-45deg) translate(4px,-2px)}
 .msg-video{position:relative;margin-top:28px;min-height:clamp(560px,68vh,800px);cursor:pointer}
