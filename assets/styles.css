@@ -56,9 +56,9 @@ header{
 }
 header.scrolled,header.solid{background:rgba(5,6,10,.82);backdrop-filter:blur(14px);padding:14px 40px;border-bottom:1px solid var(--line)}
 .logo{display:flex;align-items:center;gap:12px;font-family:'Manrope',sans-serif;font-weight:700;letter-spacing:.02em}
-.logo .logo-img{height:64px;width:auto;display:block}
-header.scrolled .logo .logo-img,header.solid .logo .logo-img{height:52px}
-footer .logo .logo-img{height:66px}
+.logo .logo-img{height:76px;width:auto;display:block}
+header.scrolled .logo .logo-img,header.solid .logo .logo-img{height:60px}
+footer .logo .logo-img{height:78px}
 /* legacy inline-mark styles (kept for any fallback) */
 .logo .mark{width:38px;height:38px;flex:none}
 .logo b{font-size:1.05rem;line-height:1;display:block}
@@ -242,9 +242,7 @@ footer .logo .logo-img{height:66px}
 .stream a:hover{color:var(--orange);padding-left:12px}
 .stream a:hover i{transform:translate(3px,-3px)}
 .msg-video{position:relative;min-height:clamp(440px,56vh,620px);cursor:pointer}
-.msg-img{position:absolute;inset:0;background:#000 url('gallery/preach.jpg') center 22%/cover no-repeat;
-  -webkit-mask:radial-gradient(135% 100% at 56% 42%, #000 48%, rgba(0,0,0,.35) 74%, transparent 92%);
-          mask:radial-gradient(135% 100% at 56% 42%, #000 48%, rgba(0,0,0,.35) 74%, transparent 92%)}
+.msg-img{position:absolute;inset:0;background:transparent url('gallery/preach-cut.webp') center bottom/contain no-repeat}
 .play-yt{position:absolute;top:48%;left:52%;transform:translate(-50%,-50%);z-index:3;
   width:84px;height:60px;border-radius:16px;background:#ff2b2b;display:grid;place-items:center;
   color:#fff;font-size:1.5rem;box-shadow:0 12px 40px -8px rgba(255,43,43,.6);transition:transform .3s}
@@ -398,6 +396,7 @@ footer a:hover{color:var(--orange)}
 @media(max-width:960px){
   .wrap{padding:0 22px}
   header{padding:18px 22px}
+  header.scrolled,header.solid{padding:12px 22px}
   .nav-desk{display:none}
   .menu-btn{display:inline-flex}
   .mission .grid,.msg-grid,.msg-feature,.svc-grid,.lead-grid,.community .wrap,.give-grid,.contact-grid{grid-template-columns:1fr;gap:36px}
@@ -416,8 +415,6 @@ footer a:hover{color:var(--orange)}
   .pillars,.foot-grid,.msg-cards,.ways-grid{grid-template-columns:1fr}
   .svc,.form{padding:30px}
   .hero{padding-bottom:12vh}
-  .hero .wrap{padding-left:8px;padding-right:8px}   /* let the tagline grow as big as possible */
   .hero h1{letter-spacing:-.025em}
-  header{padding-left:8px;padding-right:8px}        /* logo aligns with the hero text left edge */
-  .belief .wrap{padding-left:12px;padding-right:12px}   /* a little more room for the statement */
+  .belief .wrap{padding-left:14px;padding-right:14px}   /* a little more room for the statement */
 }
