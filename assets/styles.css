@@ -119,6 +119,14 @@ footer .logo .logo-img{height:78px}
 .reveal{opacity:0;transform:translateY(38px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 
+/* animated orange circle around an emphasised word (draws in on reveal) */
+.owc{position:relative;white-space:nowrap;color:#fff;display:inline-block}
+.owc::after{content:"";position:absolute;left:-9%;right:-9%;top:-6%;bottom:-8%;pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 130' preserveAspectRatio='none'%3E%3Cpath d='M42 66C26 32 118 14 176 18c82 6 128 30 114 62-12 30-150 42-224 32-40-6-58-30-24-52' fill='none' stroke='%23ff5a00' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+  clip-path:inset(0 100% -20% 0)}
+.reveal.in .owc::after,.reveal.owc.in::after{animation:drawCirc .7s .35s cubic-bezier(.6,0,.3,1) forwards}
+@media(prefers-reduced-motion:reduce){.owc::after{clip-path:none}.reveal.in .owc::after{animation:none}}
+
 /* ---------- Welcome / Mission (full-bleed image + left text) ---------- */
 .mission{position:relative;min-height:86vh;display:flex;align-items:center;overflow:hidden;padding:120px 0}
 .mission-bg{position:absolute;inset:0;z-index:0;background:#05060a url('gallery/congregation.webp') center/cover no-repeat}
@@ -308,10 +316,10 @@ footer .logo .logo-img{height:78px}
 /* ---------- Community / Telegram ---------- */
 .community{background:var(--orange);color:#fff;padding:130px 0;overflow:hidden}
 .community::before{content:"";position:absolute;bottom:-40%;left:-8%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(0,56,255,.6),transparent 65%)}
-.community .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+.community .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center}
 .community h2{font-size:clamp(2.4rem,6vw,5rem)}
 .community p{font-size:1.15rem;max-width:520px;margin:22px 0 32px;color:rgba(255,255,255,.94)}
-.community .clock{font-family:'Anton',sans-serif;font-size:clamp(3rem,7.5vw,6.2rem);line-height:1;white-space:nowrap;text-align:right;color:transparent;-webkit-text-stroke:1.8px rgba(255,255,255,.9)}
+.community .clock{font-family:'Anton',sans-serif;font-size:clamp(3.6rem,9vw,7.6rem);line-height:1;white-space:nowrap;text-align:right;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.9)}
 .community .clock small{display:block;font-family:'Manrope',sans-serif;font-size:.85rem;-webkit-text-stroke:0;color:#fff;letter-spacing:.16em;margin-top:12px;font-weight:600}
 
 /* ---------- Testimonies ---------- */
