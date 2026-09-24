@@ -320,7 +320,7 @@ footer .logo .logo-img{height:78px}
 .gallery .wrap .sec-head{margin-bottom:0}
 /* full-bleed collage: tall left | middle split in two | wider tall right (matches The New) */
 .gallery-grid{display:grid;grid-template-columns:1fr 1fr 1.9fr;grid-template-rows:46fr 54fr;gap:0;
-  width:100%;max-width:none;margin:54px 0 0;padding:0;height:clamp(460px,64vh,680px)}
+  width:100%;max-width:none;margin:48px 0 0;padding:0;height:100vh;height:100svh}
 .gtile{position:relative;overflow:hidden}
 .gtile > *{transition:transform .6s var(--ease)}
 .gtile:hover{}
