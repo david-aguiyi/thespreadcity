@@ -334,7 +334,6 @@ footer .logo .logo-img{height:78px}
 
 /* ---------- Community / Telegram ---------- */
 .community{background:var(--orange);color:#fff;padding:130px 0;overflow:hidden}
-.community::before{content:"";position:absolute;bottom:-40%;left:-8%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(0,56,255,.6),transparent 65%)}
 .community .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center}
 .community h2{font-size:clamp(2.4rem,6vw,5rem)}
 .community p{font-size:1.15rem;max-width:520px;margin:22px 0 32px;color:rgba(255,255,255,.94)}
