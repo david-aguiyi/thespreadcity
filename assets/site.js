@@ -11,6 +11,9 @@ const LINKS = {
   latestVideo: "",                        // TODO: paste the latest video URL (leave "" for none yet)
   // Online giving link (Paystack / Flutterwave / etc.)
   giveOnline:  "",                        // TODO: paste your secure giving link
+  // Podcast / streaming
+  spotify:      "",                       // TODO: Spotify show link
+  applePodcast: "",                       // TODO: Apple Podcasts link
   // Social profiles
   youtube:     "",                        // TODO
   instagram:   "",                        // TODO
