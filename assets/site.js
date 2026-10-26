@@ -7,8 +7,8 @@
 const LINKS = {
   // Telegram channel (prayer, devotionals, audio messages)
   telegram:    "https://t.me/havenwordchurch",
-  // Latest video message (YouTube / Facebook / Vimeo watch URL)
-  latestVideo: "",                        // TODO: paste the latest video URL (leave "" for none yet)
+  // Latest audio message (Telegram post) - the home page play button opens this
+  latestMessage: "https://t.me/havenwordchurch/2869",
   // Online giving link (Paystack / Flutterwave / etc.)
   giveOnline:  "",                        // TODO: paste your secure giving link
   // Podcast / streaming
@@ -50,10 +50,10 @@ document.querySelectorAll('[data-link]').forEach(el => {
 if (LINKS.email) document.querySelectorAll('[data-mailto]').forEach(el => el.setAttribute('href', 'mailto:' + LINKS.email));
 if (LINKS.phone) document.querySelectorAll('[data-tel]').forEach(el => el.setAttribute('href', 'tel:' + LINKS.phone.replace(/\s/g,'')));
 
-/* ---- Video: play button opens the latest video in a new tab (or nudges to Messages) ---- */
+/* ---- Play button opens the latest message in a new tab (or nudges to Messages) ---- */
 document.querySelectorAll('[data-video]').forEach(el => {
   el.addEventListener('click', () => {
-    if (LINKS.latestVideo) window.open(LINKS.latestVideo, '_blank', 'noopener');
+    if (LINKS.latestMessage) window.open(LINKS.latestMessage, '_blank', 'noopener');
     else window.location.href = 'messages.html';
   });
 });
