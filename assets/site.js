@@ -17,7 +17,7 @@ const LINKS = {
   // Social profiles
   youtube:     "",                        // TODO
   instagram:   "",                        // TODO
-  facebook:    "",                        // TODO
+  facebook:    "https://www.facebook.com/HavenWordChurch",
   tiktok:      "",                        // TODO
   x:           "",                        // TODO
   // Contact
