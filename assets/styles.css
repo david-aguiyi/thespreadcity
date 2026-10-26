@@ -299,9 +299,9 @@ footer .logo .logo-img{height:78px}
 .leader .portrait{position:relative;height:440px;background:#080a12 center/cover no-repeat;overflow:hidden}
 .leader .portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,12,18,.9))}
 .leader:hover .portrait{filter:brightness(1.08)}
-.leader .portrait.pa{background-image:url('pastor-1.svg')}
+.leader .portrait.pa{background:#000 url('gallery/pastor-anthonia.webp') center bottom/auto 92% no-repeat}
+.leader .portrait.pa::after{background:linear-gradient(180deg,rgba(10,12,18,0) 50%,rgba(10,12,18,.85) 82%,#0a0c12 100%),linear-gradient(90deg,#000 0%,rgba(0,0,0,0) 14%,rgba(0,0,0,0) 86%,#000 100%)}
 .leader .portrait.pb{background-image:url('pastor-2.svg')}
-.leader .portrait .badge{position:absolute;left:24px;bottom:22px;z-index:2;font-family:'Anton',sans-serif;font-size:1.4rem;letter-spacing:.05em;color:#fff;opacity:.9}
 .leader .info{padding:32px}
 .leader .role{font-family:'Manrope',sans-serif;font-weight:600;letter-spacing:.16em;font-size:.72rem;text-transform:uppercase;color:var(--orange)}
 .leader h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em;line-height:1;font-size:2.2rem;margin:8px 0 12px}
