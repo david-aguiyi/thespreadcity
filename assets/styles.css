@@ -299,10 +299,7 @@ footer .logo .logo-img{height:78px}
 .leader .portrait{position:relative;height:340px;background:#080a12 center/cover no-repeat;overflow:hidden}
 .leader .portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,12,18,.9))}
 .leader:hover .portrait{filter:brightness(1.08)}
-.leader .portrait.pa{background:
-  url('gallery/pastor-anthonia-cut.webp') center bottom/auto 94% no-repeat,
-  radial-gradient(ellipse 46% 60% at 50% 48%,rgba(0,56,255,.7) 0%,rgba(0,56,255,.3) 45%,rgba(0,56,255,0) 78%),
-  #0a0c12}   /* blue glow sits behind the cut-out pastor */
+.leader .portrait.pa{background:#0a0c12 url('gallery/pastor-anthonia-cut.webp') center bottom/auto 94% no-repeat}
 .leader .portrait.pa::after{background:linear-gradient(180deg,rgba(10,12,18,0) 50%,rgba(10,12,18,.85) 82%,#0a0c12 100%)}
 .leader .portrait.pb{background-image:url('pastor-2.svg')}
 .leader .info{padding:24px 28px 28px}
