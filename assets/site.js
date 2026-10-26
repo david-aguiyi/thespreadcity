@@ -18,7 +18,7 @@ const LINKS = {
   youtube:     "",                        // TODO
   instagram:   "https://www.instagram.com/thespreadcity/",
   facebook:    "https://www.facebook.com/HavenWordChurch",
-  tiktok:      "",                        // TODO
+  tiktok:      "https://www.tiktok.com/@spreadcitymoments",
   x:           "",                        // TODO
   // Contact
   email:       "hello@thespreadcity.org", // TODO: your real church email
