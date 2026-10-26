@@ -8,7 +8,7 @@ const LINKS = {
   // Telegram channel (prayer, devotionals, audio messages)
   telegram:    "https://t.me/havenwordchurch",
   // Latest audio message (Telegram post) - the home page play button opens this
-  latestMessage: "https://t.me/havenwordchurch/2869",
+  latestMessage: "https://t.me/havenwordchurch/2873",
   // Online giving link (Paystack / Flutterwave / etc.)
   giveOnline:  "",                        // TODO: paste your secure giving link
   // Podcast / streaming
