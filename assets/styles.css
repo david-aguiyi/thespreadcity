@@ -364,7 +364,6 @@ footer .logo .logo-img{height:78px}
 .way .row b{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.04em;font-size:1rem;text-align:right}
 .todo{display:inline-block;margin-top:8px;font-family:'Manrope',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);border:1px dashed rgba(255,90,0,.5);padding:4px 9px;border-radius:6px}
 .link-missing{position:relative}
-.link-missing::after{content:"◔";margin-left:6px;font-size:.8em;opacity:.7}
 
 /* ---------- Contact page ---------- */
 .contact-wrap{padding:110px 0 130px}
@@ -408,7 +407,6 @@ footer a:hover{color:var(--orange)}
 .socials a:hover{background:var(--orange);border-color:var(--orange);transform:translateY(-3px)}
 .socials a{color:rgba(255,255,255,.85);font-size:.95rem}
 .socials a:hover{color:#fff}
-.socials .link-missing::after{display:none}   /* just the icon, no "coming soon" mark */
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-top:60px;padding-top:24px;border-top:1px solid var(--line);color:var(--grey);font-size:.85rem}
 
 /* ---------- Mobile menu ---------- */
