@@ -6,7 +6,7 @@
    ===================================================================== */
 const LINKS = {
   // Telegram channel (prayer, devotionals, audio messages)
-  telegram:    "https://t.me/",          // TODO: paste your real Telegram channel link
+  telegram:    "https://t.me/havenwordchurch",
   // Latest video message (YouTube / Facebook / Vimeo watch URL)
   latestVideo: "",                        // TODO: paste the latest video URL (leave "" for none yet)
   // Online giving link (Paystack / Flutterwave / etc.)

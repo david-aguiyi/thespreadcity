@@ -92,7 +92,6 @@ footer .logo .logo-img{height:78px}
   background:radial-gradient(80% 130% at 80% -10%, rgba(30,107,255,.35), transparent 55%),
              radial-gradient(60% 100% at 0% 120%, rgba(255,90,0,.2), transparent 55%),
              linear-gradient(180deg,#080c1c,#05060a)}
-.page-hero .globe-bg{position:absolute;top:-10%;right:-10%;width:520px;height:520px;background:url('spread.svg') center/contain no-repeat;opacity:.12;pointer-events:none;animation:spin 80s linear infinite}
 .page-hero h1{font-size:clamp(3rem,9vw,7rem);margin:14px 0 20px}
 .page-hero h1 .o{color:var(--orange)}
 .page-hero p{max-width:520px;font-weight:400;color:rgba(255,255,255,.78)}
@@ -134,8 +133,6 @@ footer .logo .logo-img{height:78px}
 
 /* ---------- Belief (blue block, centered serif statement) ---------- */
 .belief{background:var(--blue);padding:120px 0 130px;overflow:hidden;text-align:center}
-.belief .globe{display:none}
-@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
 .belief-eyebrow{position:relative;z-index:2;font-family:'Manrope',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.24em;text-transform:uppercase;color:#fff;opacity:.9;margin-bottom:70px}
 .belief-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.9fr 1fr;gap:50px;align-items:center}
 .belief .side p{font-weight:400;color:#fff}
@@ -362,7 +359,6 @@ footer .logo .logo-img{height:78px}
 .way .row{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-top:1px solid var(--line);font-size:.95rem}
 .way .row span{color:var(--grey)}
 .way .row b{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.04em;font-size:1rem;text-align:right}
-.todo{display:inline-block;margin-top:8px;font-family:'Manrope',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);border:1px dashed rgba(255,90,0,.5);padding:4px 9px;border-radius:6px}
 .link-missing{position:relative}
 
 /* ---------- Contact page ---------- */
