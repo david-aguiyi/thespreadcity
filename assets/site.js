@@ -183,18 +183,6 @@ if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
   addEventListener('resize', () => place(false));
 })();
 
-/* ---- Message filter chips (messages page) ---- */
-document.querySelectorAll('.filter-bar .chip').forEach(chip => {
-  chip.addEventListener('click', () => {
-    document.querySelectorAll('.filter-bar .chip').forEach(c => c.classList.remove('on'));
-    chip.classList.add('on');
-    const f = chip.dataset.filter;
-    document.querySelectorAll('.msg-card').forEach(card => {
-      card.style.display = (f === 'all' || card.dataset.type === f) ? '' : 'none';
-    });
-  });
-});
-
 /* ---- Contact form (front-end only placeholder) ---- */
 const cf = document.getElementById('contactForm');
 if (cf) cf.addEventListener('submit', (e) => {
