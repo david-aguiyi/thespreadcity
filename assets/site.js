@@ -16,7 +16,7 @@ const LINKS = {
   applePodcast: "",                       // TODO: Apple Podcasts link
   // Social profiles
   youtube:     "",                        // TODO
-  instagram:   "",                        // TODO
+  instagram:   "https://www.instagram.com/thespreadcity/",
   facebook:    "https://www.facebook.com/HavenWordChurch",
   tiktok:      "",                        // TODO
   x:           "",                        // TODO
