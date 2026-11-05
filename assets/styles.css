@@ -631,44 +631,6 @@ select.form-control option{background:#0c0f18;color:#fff}
   box-shadow:0 4px 18px rgba(255,90,0,.25);
 }
 
-/* Accommodation card selector */
-.accom-cards{display:grid;grid-template-columns:1fr;gap:12px}
-.accom-card{position:relative}
-.accom-card input{position:absolute;opacity:0;pointer-events:none}
-.accom-ui{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:16px 20px;border-radius:14px;
-  background:rgba(255,255,255,.04);border:1.5px solid var(--line);
-  cursor:pointer;transition:all .25s;
-}
-.accom-card input:checked + .accom-ui{
-  border-color:var(--orange);background:rgba(255,90,0,.12);
-}
-.accom-info strong{display:block;color:#fff;font-size:1rem}
-.accom-info span{font-size:.85rem;color:var(--grey)}
-.accom-price{
-  font-family:'Anton',sans-serif;font-size:1.25rem;color:var(--orange);
-  letter-spacing:.5px;
-}
-
-/* Conditional Payment Card */
-.payment-alert{
-  display:none;margin-top:20px;
-  background:rgba(255,90,0,.08);
-  border:1.5px dashed rgba(255,90,0,.5);
-  border-radius:18px;padding:24px;
-  animation:fadePanel .3s var(--ease);
-}
-.payment-alert.active{display:block}
-.payment-alert h5{color:var(--orange);font-size:1.05rem;margin-bottom:8px;display:flex;align-items:center;gap:8px}
-.payment-alert p{font-size:.9rem;color:var(--text-p);margin-bottom:14px}
-.bank-badge-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:12px;background:rgba(0,0,0,.45);
-  padding:16px;border-radius:12px;margin-bottom:16px;
-}
-.bb-item small{display:block;color:var(--grey);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em}
-.bb-item strong{color:#fff;font-size:1rem}
-
 /* Form Submit button */
 .btn-submit-reg{
   width:100%;justify-content:center;padding:18px;font-size:.94rem;
@@ -742,23 +704,8 @@ select.form-control option{background:#0c0f18;color:#fff}
 }
 .faq-card.open .faq-a{padding:0 26px 24px;max-height:300px}
 
-/* Location Section */
-.conf-loc-sec{
-  padding:100px 0;background:#06070d;border-top:1px solid var(--line);
-}
-.loc-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.loc-card{
-  background:rgba(15,18,30,.85);border:1px solid var(--line);
-  border-radius:24px;padding:36px;box-shadow:0 20px 50px rgba(0,0,0,.6);
-}
-.loc-btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
-.btn-dir{
-  flex:1;min-width:160px;justify-content:center;
-  padding:15px 22px;border-radius:100px;
-}
-
 @media(max-width:960px){
-  .conf-grid-2,.loc-grid,.conf-promo-card{grid-template-columns:1fr;gap:36px}
+  .conf-grid-2,.conf-promo-card{grid-template-columns:1fr;gap:36px}
   .session-card{grid-template-columns:1fr;gap:12px}
   .form-grid{grid-template-columns:1fr}
   .pass-grid{grid-template-columns:1fr;text-align:center}

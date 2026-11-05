@@ -320,27 +320,7 @@ document.querySelectorAll('[data-copy]').forEach(el => {
     });
   });
 
-  // 3. Accommodation selection & Conditional Payment alert
-  const accomInputs = document.querySelectorAll('input[name="accommodation"]');
-  const payAlert = document.getElementById('paymentAlert');
-  const payPrice = document.getElementById('payAmountNotice');
-  function handleAccomChange(){
-    const checked = document.querySelector('input[name="accommodation"]:checked');
-    if(!checked || !payAlert) return;
-    const val = checked.value;
-    if(val === 'hostel'){
-      payAlert.classList.add('active');
-      if(payPrice) payPrice.textContent = '₦15,000 (Flat fee for the entire conference)';
-    } else if(val === 'hotel'){
-      payAlert.classList.add('active');
-      if(payPrice) payPrice.textContent = '₦25,000 per night';
-    } else {
-      payAlert.classList.remove('active');
-    }
-  }
-  accomInputs.forEach(inp => inp.addEventListener('change', handleAccomChange));
-
-  // 4. Registration Form submission
+  // 3. Registration Form submission
   const regForm = document.getElementById('confRegForm');
   const successBox = document.getElementById('regSuccessBox');
   const formBox = document.getElementById('regFormCard');
@@ -394,7 +374,6 @@ document.querySelectorAll('[data-copy]').forEach(el => {
         gender: formData.get('gender')?.toString() || '',
         isPastor: formData.get('is_pastor')?.toString() || 'No',
         origin: formData.get('origin')?.toString() || 'Ibadan',
-        accommodation: formData.get('accommodation')?.toString() || 'none',
         regCode: regCode,
         timestamp: new Date().toISOString()
       };
@@ -418,7 +397,6 @@ document.querySelectorAll('[data-copy]').forEach(el => {
       e.preventDefault();
       try { localStorage.removeItem('swc_registration_2026'); } catch(e){}
       if(regForm) regForm.reset();
-      handleAccomChange();
       if(successBox) successBox.classList.remove('active');
       if(formBox) formBox.style.display = 'block';
       if(formBox) formBox.scrollIntoView({ behavior: 'smooth' });
