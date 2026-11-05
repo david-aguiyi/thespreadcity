@@ -1,5 +1,5 @@
 /* =====================================================================
-   THE SPREAD CITY — site config & behaviour
+   THE SPREADCITY — site config & behaviour
    ---------------------------------------------------------------------
    👉 EDIT THE LINKS BELOW with your real destinations. Every button and
       social icon across ALL pages reads from this one place.
