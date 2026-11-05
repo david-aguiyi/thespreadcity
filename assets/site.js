@@ -6,23 +6,23 @@
    ===================================================================== */
 const LINKS = {
   // Telegram channel (prayer, devotionals, audio messages)
-  telegram:    "https://t.me/havenwordchurch",
+  telegram: "https://t.me/havenwordchurch",
   // Latest audio message (Telegram post) - the home page play button opens this
   latestMessage: "https://t.me/havenwordchurch/2873",
   // Online giving link (Paystack / Flutterwave / etc.)
-  giveOnline:  "",                        // TODO: paste your secure giving link
+  giveOnline: "",                        // TODO: paste your secure giving link
   // Podcast / streaming
-  spotify:      "",                       // TODO: Spotify show link
+  spotify: "",                       // TODO: Spotify show link
   applePodcast: "",                       // TODO: Apple Podcasts link
   // Social profiles
-  youtube:     "https://www.youtube.com/@TheSpreadCity",
-  instagram:   "https://www.instagram.com/thespreadcity/",
-  facebook:    "https://www.facebook.com/HavenWordChurch",
-  tiktok:      "https://www.tiktok.com/@spreadcitymoments",
-  x:           "",                        // TODO
+  youtube: "https://www.youtube.com/@TheSpreadCity",
+  instagram: "https://www.instagram.com/thespreadcity/",
+  facebook: "https://www.facebook.com/HavenWordChurch",
+  tiktok: "https://www.tiktok.com/@spreadcitymoments",
+  x: "",                        // TODO
   // Contact
-  email:       "hello@thespreadcity.org", // TODO: your real church email
-  phone:       "",                        // TODO: e.g. +234...
+  email: "hello@thespreadcity.org", // TODO: your real church email
+  phone: "",                        // TODO: e.g. +234...
   // Soul Winners Conference Registration (Google Sheets Web App)
   conferenceRegEndpoint: "https://script.google.com/macros/s/AKfycbw6mxZq8BRTi6I89QCFnb3elDUmtM4uMd5WtFKPJ4Vzc7UxScg7jNM19HNWbglt2iRL_g/exec"
 };
@@ -30,7 +30,7 @@ const LINKS = {
 // Real Google Maps directions to the church address (already wired — no edit needed)
 const CHURCH_ADDRESS = "Haven Word Church, Opposite Gate 5, Adamasingba, Ibadan, Oyo State, Nigeria";
 LINKS.directions = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(CHURCH_ADDRESS);
-LINKS.map        = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(CHURCH_ADDRESS);
+LINKS.map = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(CHURCH_ADDRESS);
 
 /* ---- Apply links to any element with data-link="key" ---- */
 document.querySelectorAll('[data-link]').forEach(el => {
@@ -50,7 +50,7 @@ document.querySelectorAll('[data-link]').forEach(el => {
 
 /* ---- mailto / tel ---- */
 if (LINKS.email) document.querySelectorAll('[data-mailto]').forEach(el => el.setAttribute('href', 'mailto:' + LINKS.email));
-if (LINKS.phone) document.querySelectorAll('[data-tel]').forEach(el => el.setAttribute('href', 'tel:' + LINKS.phone.replace(/\s/g,'')));
+if (LINKS.phone) document.querySelectorAll('[data-tel]').forEach(el => el.setAttribute('href', 'tel:' + LINKS.phone.replace(/\s/g, '')));
 
 /* ---- Play button opens the latest message in a new tab (or nudges to Messages) ---- */
 document.querySelectorAll('[data-video]').forEach(el => {
@@ -74,24 +74,24 @@ const io = new IntersectionObserver((es) => {
 document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
 
 /* ---- Mobile menu ---- */
-function openM(){ document.getElementById('mnav').classList.add('open'); }
-function closeM(){ document.getElementById('mnav').classList.remove('open'); }
-(function(){
+function openM() { document.getElementById('mnav').classList.add('open'); }
+function closeM() { document.getElementById('mnav').classList.remove('open'); }
+(function () {
   const mnav = document.getElementById('mnav');
-  if(!mnav) return;
+  if (!mnav) return;
   // click on the backdrop (not a link) closes the menu
-  mnav.addEventListener('click', (e) => { if(e.target === mnav) closeM(); });
+  mnav.addEventListener('click', (e) => { if (e.target === mnav) closeM(); });
   // Esc closes it too
-  addEventListener('keydown', (e) => { if(e.key === 'Escape') closeM(); });
+  addEventListener('keydown', (e) => { if (e.key === 'Escape') closeM(); });
 })();
 
 /* ---- Fit the hero headline: as large as possible without spilling over ---- */
-function fitHero(){
+function fitHero() {
   const h1 = document.querySelector('.hero h1');
-  if(!h1) return;
+  if (!h1) return;
   h1.style.fontSize = '';                     // back to CSS base
   const box = h1.clientWidth;                 // available width
-  if(!box) return;
+  if (!box) return;
   const cur = parseFloat(getComputedStyle(h1).fontSize) || 48;
   // measure the WIDEST line at the current font (shrink h1 to its content width)
   const dPrev = h1.style.display, wPrev = h1.style.width;
@@ -100,7 +100,7 @@ function fitHero(){
   const widest = h1.getBoundingClientRect().width;
   h1.style.display = dPrev;
   h1.style.width = wPrev;
-  if(!widest) return;
+  if (!widest) return;
   let target = cur * ((box - 1) / widest);    // scale so the widest line fills the width
   target = Math.max(22, Math.min(target, 46)); // cap so it never overwhelms large screens
   h1.style.fontSize = target + 'px';
@@ -109,19 +109,19 @@ addEventListener('resize', fitHero);
 addEventListener('orientationchange', fitHero);
 addEventListener('load', fitHero);
 addEventListener('pageshow', fitHero);
-if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitHero);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHero);
 requestAnimationFrame(fitHero);
 setTimeout(fitHero, 300);
 fitHero();
 
 /* ---- Fit the belief carousel: biggest size that keeps every statement on 2 lines ---- */
-function fitBelief(){
+function fitBelief() {
   const roller = document.querySelector('.belief-roller');
-  if(!roller) return;
+  if (!roller) return;
   const lns = [...roller.querySelectorAll('.roller-track li .ln')];
-  if(!lns.length) return;
+  if (!lns.length) return;
   const avail = roller.clientWidth - 24;      // li has 12px padding each side
-  if(avail <= 0) return;
+  if (avail <= 0) return;
   const REF = 100, LS = 0.015;                // reference px, letter-spacing (em)
   const ctx = fitBelief._ctx || (fitBelief._ctx = document.createElement('canvas').getContext('2d'));
   ctx.font = '400 ' + REF + "px Anton, sans-serif";
@@ -131,32 +131,32 @@ function fitBelief(){
       const tmp = document.createElement('div');
       tmp.innerHTML = part;
       const line = (tmp.textContent || '').trim().toUpperCase();
-      if(!line) return;
+      if (!line) return;
       const w = ctx.measureText(line).width + LS * REF * Math.max(0, line.length - 1);
-      if(w > widest) widest = w;
+      if (w > widest) widest = w;
     });
   });
-  if(!widest) return;
+  if (!widest) return;
   let target = REF * (avail / widest) * 0.98; // fill width, tiny safety
   target = Math.max(24, Math.min(target, 88));
   roller.style.setProperty('--bfs', target + 'px');
 }
-function fitAll(){ fitHero(); fitBelief(); }
-['resize','orientationchange','load','pageshow'].forEach(ev => addEventListener(ev, fitAll));
+function fitAll() { fitHero(); fitBelief(); }
+['resize', 'orientationchange', 'load', 'pageshow'].forEach(ev => addEventListener(ev, fitAll));
 // wait for the display font (Anton) before measuring so text widths are accurate
-if(document.fonts && document.fonts.load){
+if (document.fonts && document.fonts.load) {
   Promise.all([
     document.fonts.load("400 40px 'Anton'"),
     document.fonts.load("700 40px 'Manrope'")
   ]).then(fitAll).catch(fitAll);
 }
-if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
 [0, 150, 500, 1000, 1800].forEach(t => setTimeout(fitAll, t));  // re-fit until the font has settled
 
 /* ---- Belief: center-emphasized vertical carousel (steps up one statement at a time) ---- */
-(function(){
+(function () {
   const track = document.querySelector('.roller-track');
-  if(!track) return;
+  if (!track) return;
   const roller = track.parentElement;
   const items = [...track.children];
   const N = items.length / 2;                 // list is duplicated in the HTML
@@ -165,19 +165,19 @@ if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
   let a = 1;                                   // index of the centred (active) item
 
   const slot = () => roller.clientHeight / 3;
-  function place(animate){
+  function place(animate) {
     track.style.transition = animate ? EASE : 'none';
-    track.style.transform  = 'translateY(' + (-(a - 1) * slot()) + 'px)';
-    if(!animate){ void track.offsetHeight; }   // force reflow so the rebase never animates
+    track.style.transform = 'translateY(' + (-(a - 1) * slot()) + 'px)';
+    if (!animate) { void track.offsetHeight; }   // force reflow so the rebase never animates
     items.forEach((li, k) => li.classList.toggle('active', k === a));
   }
   place(false);
 
-  if(!reduce){
+  if (!reduce) {
     setInterval(() => {
       a++;
       place(true);                             // always step one statement forward
-      if(a >= N + 1){                          // stepped one into the duplicate — rebase to the identical view
+      if (a >= N + 1) {                          // stepped one into the duplicate — rebase to the identical view
         setTimeout(() => { a -= N; place(false); }, 950);
       }
     }, 2800);
@@ -274,7 +274,7 @@ document.querySelectorAll('[data-copy]').forEach(el => {
 /* =====================================================================
    SOUL WINNERS CONFERENCE 2026 — INTERACTIVE LOGIC
    ===================================================================== */
-(function initConference(){
+(function initConference() {
   // 1. Live Countdown Timer (Target: Dec 12, 2026 08:00:00 WAT)
   const cdTarget = new Date('2026-12-12T08:00:00+01:00').getTime();
   const dEl = document.getElementById('cdDays');
@@ -282,11 +282,11 @@ document.querySelectorAll('[data-copy]').forEach(el => {
   const mEl = document.getElementById('cdMins');
   const sEl = document.getElementById('cdSecs');
 
-  function updateCountdown(){
-    if(!dEl) return;
+  function updateCountdown() {
+    if (!dEl) return;
     const now = Date.now();
     const diff = cdTarget - now;
-    if(diff <= 0){
+    if (diff <= 0) {
       dEl.textContent = '00';
       hEl.textContent = '00';
       mEl.textContent = '00';
@@ -303,7 +303,7 @@ document.querySelectorAll('[data-copy]').forEach(el => {
     mEl.textContent = String(mins).padStart(2, '0');
     sEl.textContent = String(secs).padStart(2, '0');
   }
-  if(dEl){
+  if (dEl) {
     updateCountdown();
     setInterval(updateCountdown, 1000);
   }
@@ -318,7 +318,7 @@ document.querySelectorAll('[data-copy]').forEach(el => {
       panels.forEach(p => p.classList.remove('active'));
       tab.classList.add('active');
       const activePanel = document.getElementById('dayPanel-' + target);
-      if(activePanel) activePanel.classList.add('active');
+      if (activePanel) activePanel.classList.add('active');
     });
   });
 
@@ -330,14 +330,14 @@ document.querySelectorAll('[data-copy]').forEach(el => {
   // Check if previously registered
   try {
     const cached = localStorage.getItem('swc_registration_2026');
-    if(cached && successBox && formBox){
+    if (cached && successBox && formBox) {
       const reg = JSON.parse(cached);
       populatePass(reg);
     }
-  } catch(e){}
+  } catch (e) { }
 
-  function populatePass(data){
-    if(!successBox) return;
+  function populatePass(data) {
+    if (!successBox) return;
     const pName = document.getElementById('passName');
     const pCode = document.getElementById('passCode');
     const pType = document.getElementById('passType');
@@ -346,13 +346,13 @@ document.querySelectorAll('[data-copy]').forEach(el => {
     const pFrom = document.getElementById('passFrom');
     const pAccom = document.getElementById('passAccom');
 
-    if(pName) pName.textContent = data.firstName + ' ' + data.lastName;
-    if(pCode) pCode.textContent = data.regCode;
-    if(pType) pType.textContent = data.isPastor === 'Yes' ? 'MINISTER / PASTOR' : 'CONFERENCE DELEGATE';
-    if(pEmail) pEmail.textContent = data.email;
-    if(pPhone) pPhone.textContent = data.phone;
-    if(pFrom) pFrom.textContent = data.origin;
-    if(pAccom) {
+    if (pName) pName.textContent = data.firstName + ' ' + data.lastName;
+    if (pCode) pCode.textContent = data.regCode;
+    if (pType) pType.textContent = data.isPastor === 'Yes' ? 'MINISTER / PASTOR' : 'CONFERENCE DELEGATE';
+    if (pEmail) pEmail.textContent = data.email;
+    if (pPhone) pPhone.textContent = data.phone;
+    if (pFrom) pFrom.textContent = data.origin;
+    if (pAccom) {
       pAccom.textContent = 'Free Admission (Confirmed)';
     }
 
@@ -360,130 +360,130 @@ document.querySelectorAll('[data-copy]').forEach(el => {
     successBox.classList.add('active');
   }
 
-  if(regForm){
-    regForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const submitBtn = regForm.querySelector('.btn-submit-reg');
-      if(submitBtn) submitBtn.classList.add('loading');
+  if (regForm) {
+      regForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const submitBtn = regForm.querySelector('.btn-submit-reg');
+        if (submitBtn) submitBtn.classList.add('loading');
 
-      const formData = new FormData(regForm);
-      const firstName = formData.get('first_name')?.toString().trim() || '';
-      const lastName = formData.get('last_name')?.toString().trim() || '';
-      const email = formData.get('email')?.toString().trim() || '';
-      const phone = formData.get('phone')?.toString().trim() || '';
-      const gender = formData.get('gender')?.toString() || 'Male';
-      const isPastor = formData.get('is_pastor')?.toString() || 'No';
-      const origin = formData.get('origin')?.toString() || 'Ibadan (Within Town)';
-      const regCode = 'SWC-2026-' + Math.floor(1000 + Math.random() * 9000);
-      const timestampIso = new Date().toISOString();
-      const timestampFormatted = new Date().toLocaleString('en-NG', { timeZone: 'Africa/Lagos' });
+        const formData = new FormData(regForm);
+        const firstName = formData.get('first_name')?.toString().trim() || '';
+        const lastName = formData.get('last_name')?.toString().trim() || '';
+        const email = formData.get('email')?.toString().trim() || '';
+        const phone = formData.get('phone')?.toString().trim() || '';
+        const gender = formData.get('gender')?.toString() || 'Male';
+        const isPastor = formData.get('is_pastor')?.toString() || 'No';
+        const origin = formData.get('origin')?.toString() || 'Ibadan (Within Town)';
+        const regCode = 'SWC-2026-' + Math.floor(1000 + Math.random() * 9000);
+        const timestampIso = new Date().toISOString();
+        const timestampFormatted = new Date().toLocaleString('en-NG', { timeZone: 'Africa/Lagos' });
 
-      const data = {
-        firstName,
-        lastName,
-        email,
-        phone,
-        gender,
-        isPastor,
-        origin,
-        regCode,
-        timestamp: timestampIso
-      };
+        const data = {
+          firstName,
+          lastName,
+          email,
+          phone,
+          gender,
+          isPastor,
+          origin,
+          regCode,
+          timestamp: timestampIso
+        };
 
-      const payload = {
-        // Snake case keys
-        first_name: firstName,
-        last_name: lastName,
-        email: email,
-        phone: phone,
-        gender: gender,
-        is_pastor: isPastor,
-        origin: origin,
-        reg_code: regCode,
+        const payload = {
+          // Snake case keys
+          first_name: firstName,
+          last_name: lastName,
+          email: email,
+          phone: phone,
+          gender: gender,
+          is_pastor: isPastor,
+          origin: origin,
+          reg_code: regCode,
 
-        // Camel case keys
-        firstName: firstName,
-        lastName: lastName,
-        isPastor: isPastor,
-        regCode: regCode,
+          // Camel case keys
+          firstName: firstName,
+          lastName: lastName,
+          isPastor: isPastor,
+          regCode: regCode,
         fullName: `${firstName} ${lastName}`.trim(),
 
-        // Formatted title case keys
-        'First Name': firstName,
-        'Last Name': lastName,
-        'Full Name': `${firstName} ${lastName}`.trim(),
-        'Email': email,
-        'Phone': phone,
-        'Gender': gender,
-        'Is Pastor': isPastor,
-        'Origin': origin,
-        'Reg Code': regCode,
-        'Timestamp': timestampFormatted,
-        timestamp: timestampIso
-      };
+          // Formatted title case keys
+          'First Name': firstName,
+          'Last Name': lastName,
+          'Full Name': `${firstName} ${lastName}`.trim(),
+          'Email': email,
+          'Phone': phone,
+          'Gender': gender,
+          'Is Pastor': isPastor,
+          'Origin': origin,
+          'Reg Code': regCode,
+          'Timestamp': timestampFormatted,
+          timestamp: timestampIso
+        };
 
-      const endpoint = (typeof LINKS !== 'undefined' && LINKS.conferenceRegEndpoint)
-        ? LINKS.conferenceRegEndpoint
-        : 'https://script.google.com/macros/s/AKfycbw6mxZq8BRTi6I89QCFnb3elDUmtM4uMd5WtFKPJ4Vzc7UxScg7jNM19HNWbglt2iRL_g/exec';
+          const endpoint = (typeof LINKS !== 'undefined' && LINKS.conferenceRegEndpoint)
+            ? LINKS.conferenceRegEndpoint
+            : 'https://script.google.com/macros/s/AKfycbw6mxZq8BRTi6I89QCFnb3elDUmtM4uMd5WtFKPJ4Vzc7UxScg7jNM19HNWbglt2iRL_g/exec';
 
-      // Submit to Google Sheets (text/plain payload avoids CORS preflight failures on Google Apps Script)
-      try {
-        if (endpoint) {
-          await fetch(endpoint, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-              'Content-Type': 'text/plain;charset=utf-8'
-            },
-            body: JSON.stringify(payload)
-          });
+        // Submit to Google Sheets (text/plain payload avoids CORS preflight failures on Google Apps Script)
+        try {
+          if (endpoint) {
+            await fetch(endpoint, {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: {
+                'Content-Type': 'text/plain;charset=utf-8'
+              },
+              body: JSON.stringify(payload)
+            });
+          }
+        } catch (err) {
+          console.warn('Could not post registration to remote endpoint:', err);
         }
-      } catch (err) {
-        console.warn('Could not post registration to remote endpoint:', err);
-      }
 
-      try {
-        localStorage.setItem('swc_registration_2026', JSON.stringify(data));
-      } catch(err){}
+        try {
+          localStorage.setItem('swc_registration_2026', JSON.stringify(data));
+        } catch (err) { }
 
-      populatePass(data);
-      if(submitBtn) submitBtn.classList.remove('loading');
-      successBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  }
+        populatePass(data);
+        if (submitBtn) submitBtn.classList.remove('loading');
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
 
   // 5. Register Another Action
   const btnResetReg = document.getElementById('btnResetReg');
-  if(btnResetReg){
-    btnResetReg.addEventListener('click', (e) => {
-      e.preventDefault();
-      try { localStorage.removeItem('swc_registration_2026'); } catch(e){}
-      if(regForm) regForm.reset();
-      if(successBox) successBox.classList.remove('active');
-      if(formBox) formBox.style.display = 'block';
-      if(formBox) formBox.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
-
-  // 6. Print Pass Action
-  const btnPrintPass = document.getElementById('btnPrintPass');
-  if(btnPrintPass){
-    btnPrintPass.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.print();
-    });
-  }
-
-  // 7. FAQ Accordion
-  const faqCards = document.querySelectorAll('.faq-card');
-  faqCards.forEach(card => {
-    const q = card.querySelector('.faq-q');
-    if(q){
-      q.addEventListener('click', () => {
-        const isOpen = card.classList.contains('open');
-        faqCards.forEach(c => c.classList.remove('open'));
-        if(!isOpen) card.classList.add('open');
+    if (btnResetReg) {
+      btnResetReg.addEventListener('click', (e) => {
+        e.preventDefault();
+        try { localStorage.removeItem('swc_registration_2026'); } catch (e) { }
+        if (regForm) regForm.reset();
+        if (successBox) successBox.classList.remove('active');
+        if (formBox) formBox.style.display = 'block';
+        if (formBox) formBox.scrollIntoView({ behavior: 'smooth' });
       });
     }
-  });
-})();
+
+    // 6. Print Pass Action
+    const btnPrintPass = document.getElementById('btnPrintPass');
+    if (btnPrintPass) {
+      btnPrintPass.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.print();
+      });
+    }
+
+    // 7. FAQ Accordion
+    const faqCards = document.querySelectorAll('.faq-card');
+    faqCards.forEach(card => {
+      const q = card.querySelector('.faq-q');
+      if (q) {
+        q.addEventListener('click', () => {
+          const isOpen = card.classList.contains('open');
+          faqCards.forEach(c => c.classList.remove('open'));
+          if (!isOpen) card.classList.add('open');
+        });
+      }
+    });
+  }) ();
