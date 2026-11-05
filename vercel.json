@@ -1,17 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/soulwinnersconference", "destination": "/soulwinnersconference.html" },
-    { "source": "/messages", "destination": "/messages.html" },
-    { "source": "/giving", "destination": "/giving.html" }
-  ],
   "redirects": [
-    { "source": "/conference.html", "destination": "/soulwinnersconference", "permanent": true },
     { "source": "/conference", "destination": "/soulwinnersconference", "permanent": true },
-    { "source": "/soulwinnersconference.html", "destination": "/soulwinnersconference", "permanent": true },
-    { "source": "/messages.html", "destination": "/messages", "permanent": true },
-    { "source": "/giving.html", "destination": "/giving", "permanent": true },
-    { "source": "/index.html", "destination": "/", "permanent": true }
+    { "source": "/conference.html", "destination": "/soulwinnersconference", "permanent": true }
   ]
 }

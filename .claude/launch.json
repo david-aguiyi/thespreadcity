@@ -4,7 +4,7 @@
     {
       "name": "spreadcity",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["local-server.js"],
+      "runtimeArgs": ["scripts/local-server.js"],
       "port": 8899
     }
   ]

@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const root = __dirname;
+const root = path.join(__dirname, '..');
 const types = {'.html':'text/html','.svg':'image/svg+xml','.css':'text/css','.js':'text/javascript','.json':'application/json','.mp4':'video/mp4'};
 http.createServer((req, res) => {
   let p = decodeURIComponent(req.url.split('?')[0]);
