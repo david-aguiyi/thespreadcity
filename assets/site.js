@@ -23,6 +23,8 @@ const LINKS = {
   // Contact
   email:       "hello@thespreadcity.org", // TODO: your real church email
   phone:       "",                        // TODO: e.g. +234...
+  // Soul Winners Conference Registration (Google Sheets Web App)
+  conferenceRegEndpoint: "https://script.google.com/macros/s/AKfycbw6mxZq8BRTi6I89QCFnb3elDUmtM4uMd5WtFKPJ4Vzc7UxScg7jNM19HNWbglt2iRL_g/exec"
 };
 
 // Real Google Maps directions to the church address (already wired — no edit needed)
@@ -359,34 +361,94 @@ document.querySelectorAll('[data-copy]').forEach(el => {
   }
 
   if(regForm){
-    regForm.addEventListener('submit', (e) => {
+    regForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const submitBtn = regForm.querySelector('.btn-submit-reg');
       if(submitBtn) submitBtn.classList.add('loading');
 
       const formData = new FormData(regForm);
+      const firstName = formData.get('first_name')?.toString().trim() || '';
+      const lastName = formData.get('last_name')?.toString().trim() || '';
+      const email = formData.get('email')?.toString().trim() || '';
+      const phone = formData.get('phone')?.toString().trim() || '';
+      const gender = formData.get('gender')?.toString() || 'Male';
+      const isPastor = formData.get('is_pastor')?.toString() || 'No';
+      const origin = formData.get('origin')?.toString() || 'Ibadan (Within Town)';
       const regCode = 'SWC-2026-' + Math.floor(1000 + Math.random() * 9000);
+      const timestampIso = new Date().toISOString();
+      const timestampFormatted = new Date().toLocaleString('en-NG', { timeZone: 'Africa/Lagos' });
+
       const data = {
-        firstName: formData.get('first_name')?.toString().trim() || '',
-        lastName: formData.get('last_name')?.toString().trim() || '',
-        email: formData.get('email')?.toString().trim() || '',
-        phone: formData.get('phone')?.toString().trim() || '',
-        gender: formData.get('gender')?.toString() || '',
-        isPastor: formData.get('is_pastor')?.toString() || 'No',
-        origin: formData.get('origin')?.toString() || 'Ibadan',
-        regCode: regCode,
-        timestamp: new Date().toISOString()
+        firstName,
+        lastName,
+        email,
+        phone,
+        gender,
+        isPastor,
+        origin,
+        regCode,
+        timestamp: timestampIso
       };
 
-      setTimeout(() => {
-        try {
-          localStorage.setItem('swc_registration_2026', JSON.stringify(data));
-        } catch(err){}
+      const payload = {
+        // Snake case keys
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        phone: phone,
+        gender: gender,
+        is_pastor: isPastor,
+        origin: origin,
+        reg_code: regCode,
 
-        populatePass(data);
-        if(submitBtn) submitBtn.classList.remove('loading');
-        successBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 700);
+        // Camel case keys
+        firstName: firstName,
+        lastName: lastName,
+        isPastor: isPastor,
+        regCode: regCode,
+        fullName: `${firstName} ${lastName}`.trim(),
+
+        // Formatted title case keys
+        'First Name': firstName,
+        'Last Name': lastName,
+        'Full Name': `${firstName} ${lastName}`.trim(),
+        'Email': email,
+        'Phone': phone,
+        'Gender': gender,
+        'Is Pastor': isPastor,
+        'Origin': origin,
+        'Reg Code': regCode,
+        'Timestamp': timestampFormatted,
+        timestamp: timestampIso
+      };
+
+      const endpoint = (typeof LINKS !== 'undefined' && LINKS.conferenceRegEndpoint)
+        ? LINKS.conferenceRegEndpoint
+        : 'https://script.google.com/macros/s/AKfycbw6mxZq8BRTi6I89QCFnb3elDUmtM4uMd5WtFKPJ4Vzc7UxScg7jNM19HNWbglt2iRL_g/exec';
+
+      // Submit to Google Sheets (text/plain payload avoids CORS preflight failures on Google Apps Script)
+      try {
+        if (endpoint) {
+          await fetch(endpoint, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+              'Content-Type': 'text/plain;charset=utf-8'
+            },
+            body: JSON.stringify(payload)
+          });
+        }
+      } catch (err) {
+        console.warn('Could not post registration to remote endpoint:', err);
+      }
+
+      try {
+        localStorage.setItem('swc_registration_2026', JSON.stringify(data));
+      } catch(err){}
+
+      populatePass(data);
+      if(submitBtn) submitBtn.classList.remove('loading');
+      successBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
 
