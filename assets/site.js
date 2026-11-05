@@ -193,3 +193,257 @@ if (cf) cf.addEventListener('submit', (e) => {
   cf.reset();
   setTimeout(() => { btn.textContent = 'Send Message'; btn.disabled = false; }, 3500);
 });
+
+/* ---- Bank details & Copy to clipboard ---- */
+const BANK_DETAILS = {
+  bank: "Wema Bank",
+  accountName: "Haven Word Church",
+  accountNumber: "0275817169"
+};
+
+function copyTextToClipboard(text, callback) {
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text)
+      .then(callback)
+      .catch(() => fallbackCopy(text, callback));
+  } else {
+    fallbackCopy(text, callback);
+  }
+}
+
+function fallbackCopy(text, callback) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.setAttribute('readonly', '');
+  ta.style.position = 'fixed';
+  ta.style.left = '-9999px';
+  ta.style.top = '-9999px';
+  document.body.appendChild(ta);
+  ta.select();
+  try {
+    document.execCommand('copy');
+    if (callback) callback();
+  } catch (err) {
+    console.error('Copy failed:', err);
+  }
+  document.body.removeChild(ta);
+}
+
+document.querySelectorAll('[data-copy]').forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    const val = el.getAttribute('data-copy');
+    if (!val) return;
+    copyTextToClipboard(val, () => {
+      document.querySelectorAll(`[data-copy="${val}"]`).forEach(btn => {
+        if (btn._copyTimer) clearTimeout(btn._copyTimer);
+        btn.classList.add('copied');
+
+        const ic = btn.querySelector('i');
+        if (ic) {
+          if (!btn._origIcon) btn._origIcon = ic.className;
+          ic.className = 'fa-solid fa-check';
+        }
+
+        const span = btn.querySelector('span:not(.copy-tooltip)');
+        if (span) {
+          if (!btn._origText) btn._origText = span.textContent;
+          span.textContent = 'Copied! ✓';
+        }
+
+        const tip = btn.querySelector('.copy-tooltip');
+        if (tip) tip.classList.add('show');
+
+        btn._copyTimer = setTimeout(() => {
+          btn.classList.remove('copied');
+          if (ic && btn._origIcon) ic.className = btn._origIcon;
+          if (span && btn._origText) {
+            span.textContent = btn._origText;
+            btn._origText = null;
+          }
+          if (tip) tip.classList.remove('show');
+          btn._copyTimer = null;
+        }, 2000);
+      });
+    });
+  });
+});
+
+/* =====================================================================
+   SOUL WINNERS CONFERENCE 2026 — INTERACTIVE LOGIC
+   ===================================================================== */
+(function initConference(){
+  // 1. Live Countdown Timer (Target: Dec 12, 2026 08:00:00 WAT)
+  const cdTarget = new Date('2026-12-12T08:00:00+01:00').getTime();
+  const dEl = document.getElementById('cdDays');
+  const hEl = document.getElementById('cdHours');
+  const mEl = document.getElementById('cdMins');
+  const sEl = document.getElementById('cdSecs');
+
+  function updateCountdown(){
+    if(!dEl) return;
+    const now = Date.now();
+    const diff = cdTarget - now;
+    if(diff <= 0){
+      dEl.textContent = '00';
+      hEl.textContent = '00';
+      mEl.textContent = '00';
+      sEl.textContent = '00';
+      return;
+    }
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const mins = Math.floor((diff / (1000 * 60)) % 60);
+    const secs = Math.floor((diff / 1000) % 60);
+
+    dEl.textContent = String(days).padStart(2, '0');
+    hEl.textContent = String(hours).padStart(2, '0');
+    mEl.textContent = String(mins).padStart(2, '0');
+    sEl.textContent = String(secs).padStart(2, '0');
+  }
+  if(dEl){
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  }
+
+  // 2. Schedule Tabs
+  const tabs = document.querySelectorAll('.sched-tab');
+  const panels = document.querySelectorAll('.sched-panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-day');
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      const activePanel = document.getElementById('dayPanel-' + target);
+      if(activePanel) activePanel.classList.add('active');
+    });
+  });
+
+  // 3. Accommodation selection & Conditional Payment alert
+  const accomInputs = document.querySelectorAll('input[name="accommodation"]');
+  const payAlert = document.getElementById('paymentAlert');
+  const payPrice = document.getElementById('payAmountNotice');
+  function handleAccomChange(){
+    const checked = document.querySelector('input[name="accommodation"]:checked');
+    if(!checked || !payAlert) return;
+    const val = checked.value;
+    if(val === 'hostel'){
+      payAlert.classList.add('active');
+      if(payPrice) payPrice.textContent = '₦15,000 (Flat fee for the entire conference)';
+    } else if(val === 'hotel'){
+      payAlert.classList.add('active');
+      if(payPrice) payPrice.textContent = '₦25,000 per night';
+    } else {
+      payAlert.classList.remove('active');
+    }
+  }
+  accomInputs.forEach(inp => inp.addEventListener('change', handleAccomChange));
+
+  // 4. Registration Form submission
+  const regForm = document.getElementById('confRegForm');
+  const successBox = document.getElementById('regSuccessBox');
+  const formBox = document.getElementById('regFormCard');
+
+  // Check if previously registered
+  try {
+    const cached = localStorage.getItem('swc_registration_2026');
+    if(cached && successBox && formBox){
+      const reg = JSON.parse(cached);
+      populatePass(reg);
+    }
+  } catch(e){}
+
+  function populatePass(data){
+    if(!successBox) return;
+    const pName = document.getElementById('passName');
+    const pCode = document.getElementById('passCode');
+    const pType = document.getElementById('passType');
+    const pEmail = document.getElementById('passEmail');
+    const pPhone = document.getElementById('passPhone');
+    const pFrom = document.getElementById('passFrom');
+    const pAccom = document.getElementById('passAccom');
+
+    if(pName) pName.textContent = data.firstName + ' ' + data.lastName;
+    if(pCode) pCode.textContent = data.regCode;
+    if(pType) pType.textContent = data.isPastor === 'Yes' ? 'MINISTER / PASTOR' : 'CONFERENCE DELEGATE';
+    if(pEmail) pEmail.textContent = data.email;
+    if(pPhone) pPhone.textContent = data.phone;
+    if(pFrom) pFrom.textContent = data.origin;
+    if(pAccom) {
+      pAccom.textContent = 'Free Admission (Confirmed)';
+    }
+
+    formBox.style.display = 'none';
+    successBox.classList.add('active');
+  }
+
+  if(regForm){
+    regForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = regForm.querySelector('.btn-submit-reg');
+      if(submitBtn) submitBtn.classList.add('loading');
+
+      const formData = new FormData(regForm);
+      const regCode = 'SWC-2026-' + Math.floor(1000 + Math.random() * 9000);
+      const data = {
+        firstName: formData.get('first_name')?.toString().trim() || '',
+        lastName: formData.get('last_name')?.toString().trim() || '',
+        email: formData.get('email')?.toString().trim() || '',
+        phone: formData.get('phone')?.toString().trim() || '',
+        gender: formData.get('gender')?.toString() || '',
+        isPastor: formData.get('is_pastor')?.toString() || 'No',
+        origin: formData.get('origin')?.toString() || 'Ibadan',
+        accommodation: formData.get('accommodation')?.toString() || 'none',
+        regCode: regCode,
+        timestamp: new Date().toISOString()
+      };
+
+      setTimeout(() => {
+        try {
+          localStorage.setItem('swc_registration_2026', JSON.stringify(data));
+        } catch(err){}
+
+        populatePass(data);
+        if(submitBtn) submitBtn.classList.remove('loading');
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 700);
+    });
+  }
+
+  // 5. Register Another Action
+  const btnResetReg = document.getElementById('btnResetReg');
+  if(btnResetReg){
+    btnResetReg.addEventListener('click', (e) => {
+      e.preventDefault();
+      try { localStorage.removeItem('swc_registration_2026'); } catch(e){}
+      if(regForm) regForm.reset();
+      handleAccomChange();
+      if(successBox) successBox.classList.remove('active');
+      if(formBox) formBox.style.display = 'block';
+      if(formBox) formBox.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  // 6. Print Pass Action
+  const btnPrintPass = document.getElementById('btnPrintPass');
+  if(btnPrintPass){
+    btnPrintPass.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.print();
+    });
+  }
+
+  // 7. FAQ Accordion
+  const faqCards = document.querySelectorAll('.faq-card');
+  faqCards.forEach(card => {
+    const q = card.querySelector('.faq-q');
+    if(q){
+      q.addEventListener('click', () => {
+        const isOpen = card.classList.contains('open');
+        faqCards.forEach(c => c.classList.remove('open'));
+        if(!isOpen) card.classList.add('open');
+      });
+    }
+  });
+})();
