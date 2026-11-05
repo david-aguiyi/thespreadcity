@@ -1,7 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": null,
-  "buildCommand": null,
-  "installCommand": null,
-  "outputDirectory": "."
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/soulwinnersconference", "destination": "/soulwinnersconference.html" }
+  ],
+  "redirects": [
+    { "source": "/conference.html", "destination": "/soulwinnersconference", "permanent": true },
+    { "source": "/conference", "destination": "/soulwinnersconference", "permanent": true }
+  ]
 }

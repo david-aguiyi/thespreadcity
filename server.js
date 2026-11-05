@@ -6,7 +6,10 @@ const types = {'.html':'text/html','.svg':'image/svg+xml','.css':'text/css','.js
 http.createServer((req, res) => {
   let p = decodeURIComponent(req.url.split('?')[0]);
   if (p === '/') p = '/index.html';
-  const file = path.join(root, p);
+  let file = path.join(root, p);
+  if (!path.extname(file) && fs.existsSync(file + '.html')) {
+    file += '.html';
+  }
   if (!file.startsWith(root)) { res.writeHead(403); return res.end('forbidden'); }
   fs.readFile(file, (err, data) => {
     if (err) { res.writeHead(404); return res.end('not found'); }

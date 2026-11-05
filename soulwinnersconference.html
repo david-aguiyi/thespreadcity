@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soul Winners Conference 2026 — The Spread City</title>
+  <meta name="description"
+    content="Register for Soul Winners Conference 2026 holding by 12th December at Haven Word Church, The Spread City, Ibadan. Raising ministers, not spectators." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header" class="solid">
+    <a href="index.html" class="logo">
+      <img src="assets/logo.svg" class="logo-img" alt="The Spread City" />
+    </a>
+    <nav class="nav-desk">
+      <a class="lnk" href="index.html#mission">About</a>
+      <a class="lnk" href="index.html#services">Services</a>
+      <a class="lnk" href="messages.html">Messages</a>
+      <a class="lnk" href="giving.html">Giving</a>
+      <a class="lnk active" href="soulwinnersconference">Conference</a>
+      <a class="btn btn-orange" href="#reg-form">Register Now</a>
+    </nav>
+    <a class="btn btn-ghost menu-btn" onclick="openM()">Menu</a>
+  </header>
+
+  <div class="mobile-nav" id="mnav">
+    <span class="mobile-close" onclick="closeM()"><i class="fa-solid fa-xmark"></i></span>
+    <a href="index.html#mission" onclick="closeM()">About</a>
+    <a href="index.html#services" onclick="closeM()">Services</a>
+    <a href="messages.html" onclick="closeM()">Messages</a>
+    <a href="giving.html" onclick="closeM()">Giving</a>
+    <a href="soulwinnersconference" onclick="closeM()">Conference</a>
+    <a href="#reg-form" onclick="closeM()">Register Now</a>
+  </div>
+
+  <!-- ============ CONFERENCE HERO ============ -->
+  <section class="conf-page-hero" id="top">
+    <div class="wrap">
+      <div class="conf-hero-inner">
+        <h1 class="display conf-hero-title reveal">
+          SOUL WINNERS<br><span class="o">CONFERENCE</span> 2026
+        </h1>
+        <p class="conf-hero-sub reveal">
+          Raising ministers, not spectators — three days of the Word, prayer, and evangelistic fire.
+        </p>
+
+        <div class="conf-meta-row reveal">
+          <div class="conf-meta-item">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span><strong>11th – 13th December 2026</strong></span>
+          </div>
+        </div>
+
+        <!-- Live Countdown Box -->
+        <div class="countdown-box reveal">
+          <div class="countdown-grid">
+            <div class="cd-item">
+              <span class="cd-num" id="cdDays">00</span>
+              <span class="cd-unit">Days</span>
+            </div>
+            <div class="cd-item">
+              <span class="cd-num" id="cdHours">00</span>
+              <span class="cd-unit">Hours</span>
+            </div>
+            <div class="cd-item">
+              <span class="cd-num" id="cdMins">00</span>
+              <span class="cd-unit">Minutes</span>
+            </div>
+            <div class="cd-item">
+              <span class="cd-num" id="cdSecs">00</span>
+              <span class="cd-unit">Seconds</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-cta reveal" style="justify-content:center">
+          <a href="#reg-form" class="btn btn-orange">
+            Register Now <svg class="sarrow" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+              <path d="M5 25 L25 5 H14 M25 5 V16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT CONFERENCE ============ -->
+  <section class="conf-about-sec" id="about">
+    <div class="wrap" style="text-align:center;max-width:760px">
+      <div class="eyebrow orange reveal">About The Meeting</div>
+      <h2 class="display reveal" style="font-size:clamp(2.2rem,5vw,3.8rem);line-height:.95;margin:14px 0 20px">
+        Equipping Ministers to<br><span class="owc">Ignite the Nations.</span>
+      </h2>
+      <p class="reveal" style="font-size:1.15rem;line-height:1.7;margin:0 auto">
+        Three days in the Word, prayer, and evangelistic fire — raising ministers to win the harvest and carry the flame
+        to every city.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ MEETING SCHEDULE ============ -->
+  <section class="conf-sched-sec" id="schedule">
+    <div class="wrap">
+      <div class="sec-head" style="text-align:center;margin-bottom:10px">
+        <div>
+          <div class="eyebrow orange reveal">Programme Flow</div>
+          <h2 class="display reveal" style="font-size:clamp(2.4rem,6vw,4.2rem)">Meeting Schedule</h2>
+        </div>
+      </div>
+      <p class="reveal" style="text-align:center;max-width:540px;margin:0 auto">
+        Three days designed to sharpen, equip, and commission you for the harvest.
+      </p>
+
+      <!-- Schedule Tabs -->
+      <div class="sched-tabs-wrap reveal">
+        <button class="sched-tab active" data-day="1">Day 1 · Friday 11 Dec</button>
+        <button class="sched-tab" data-day="2">Day 2 · Saturday 12 Dec (Main)</button>
+        <button class="sched-tab" data-day="3">Day 3 · Sunday 13 Dec</button>
+      </div>
+
+      <!-- Panel 1: Friday -->
+      <div class="sched-panel active" id="dayPanel-1">
+        <div class="session-card">
+          <div class="session-time">
+            4:30 PM
+            <small>Arrival</small>
+          </div>
+          <div class="session-body">
+            <h4>Accreditation &amp; Badge Pickup</h4>
+            <p>Registration verification and badge collection for traveling delegates.</p>
+            <span class="session-tag">Registration Desk</span>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="session-time">
+            5:30 PM
+            <small>Opening Rally</small>
+          </div>
+          <div class="session-body">
+            <h4>Opening Consecration &amp; The Cry of the Harvester</h4>
+            <p>Intercession, prophetic worship, and opening keynote by Lead Pastor Anthonia Amadi.</p>
+            <span class="session-tag">Auditorium · Main Session</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2: Saturday (12th Dec) -->
+      <div class="sched-panel" id="dayPanel-2">
+        <div class="session-card">
+          <div class="session-time">
+            7:00 AM
+            <small>Morning Fire</small>
+          </div>
+          <div class="session-body">
+            <h4>Morning Fire &amp; Spiritual Stamina</h4>
+            <p>Intercession, deep immersion into the scriptures, and spiritual authority.</p>
+            <span class="session-tag">Auditorium · Prayer &amp; Word</span>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="session-time">
+            10:30 AM
+            <small>Workshop</small>
+          </div>
+          <div class="session-body">
+            <h4>Soul Winning Mechanics &amp; Systems</h4>
+            <p>Practical street evangelism methods, follow-up frameworks, and campus outreach.</p>
+            <span class="session-tag">Auditorium · Workshop</span>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="session-time">
+            2:30 PM
+            <small>Field Outbreak</small>
+          </div>
+          <div class="session-body">
+            <h4>City Outbreak &amp; Field Demonstration</h4>
+            <p>Teams deploy across key hubs in Ibadan to win souls and pray for the sick.</p>
+            <span class="session-tag">Field Teams · City Outreach</span>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="session-time">
+            5:30 PM
+            <small>Evening Rally</small>
+          </div>
+          <div class="session-body">
+            <h4>Grand Impartation Rally &amp; Signs of the Kingdom</h4>
+            <p>Harvest testimonies, healing rally, and laying on of hands for ministry impartation.</p>
+            <span class="session-tag">Auditorium · Main Impartation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3: Sunday -->
+      <div class="sched-panel" id="dayPanel-3">
+        <div class="session-card">
+          <div class="session-time">
+            7:30 AM
+            <small>1st Service</small>
+          </div>
+          <div class="session-body">
+            <h4>Thanksgiving &amp; Celebration Service</h4>
+            <p>Celebration of fruits, ordination of ambassadors, and thanksgiving worship.</p>
+            <span class="session-tag">Auditorium · Celebration</span>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="session-time">
+            10:00 AM
+            <small>2nd Service</small>
+          </div>
+          <div class="session-body">
+            <h4>Grand Commissioning &amp; Send-Forth</h4>
+            <p>Final charge, prophetic blessing, communion, and sending delegates back as torches.</p>
+            <span class="session-tag">Auditorium · Commissioning</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ REGISTRATION FORM ============ -->
+  <section class="conf-reg-sec" id="reg-form">
+    <div class="wrap reg-container">
+      <div class="reg-card" id="regFormCard">
+        <div class="reg-header">
+          <div class="eyebrow orange reveal">Free Registration</div>
+          <h3 class="display reveal">SOUL WINNERS <span class="o">CONFERENCE 2026</span></h3>
+          <p class="reveal">Please fill in your details to secure your seat.</p>
+        </div>
+
+        <form id="confRegForm" class="reveal">
+          <div class="form-grid">
+            <!-- First & Last Name -->
+            <div class="form-group">
+              <label for="first_name">First Name <span class="req">*</span></label>
+              <input type="text" id="first_name" name="first_name" class="form-control" placeholder="e.g. David"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="last_name">Last Name <span class="req">*</span></label>
+              <input type="text" id="last_name" name="last_name" class="form-control" placeholder="e.g. Adeleke"
+                required />
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required />
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="080 1234 5678" required />
+            </div>
+
+            <!-- Gender Radio -->
+            <div class="form-group form-full">
+              <label>Gender <span class="req">*</span></label>
+              <div class="radio-chips">
+                <label class="chip-opt">
+                  <input type="radio" name="gender" value="Male" required checked />
+                  <span class="chip-label"><i class="fa-solid fa-mars"></i> Male</span>
+                </label>
+                <label class="chip-opt">
+                  <input type="radio" name="gender" value="Female" required />
+                  <span class="chip-label"><i class="fa-solid fa-venus"></i> Female</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Are you a Pastor / Minister? -->
+            <div class="form-group form-full">
+              <label>Are you a Pastor / Ministry Leader? <span class="req">*</span></label>
+              <div class="radio-chips">
+                <label class="chip-opt">
+                  <input type="radio" name="is_pastor" value="Yes" required />
+                  <span class="chip-label"><i class="fa-solid fa-check"></i> Yes, I am</span>
+                </label>
+                <label class="chip-opt">
+                  <input type="radio" name="is_pastor" value="No" required checked />
+                  <span class="chip-label"><i class="fa-solid fa-user"></i> No, I'm not</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Where are you coming from? -->
+            <div class="form-group form-full">
+              <label for="origin">Where are you coming from? <span class="req">*</span></label>
+              <select id="origin" name="origin" class="form-control" required>
+                <option value="Ibadan (Within Town)">Ibadan (Within Town)</option>
+                <option value="Lagos State">Lagos State</option>
+                <option value="Ogun State (Abeokuta, etc.)">Ogun State (Abeokuta, etc.)</option>
+                <option value="Osun State (Osogbo, Ife, etc.)">Osun State (Osogbo, Ife, etc.)</option>
+                <option value="Oyo State (Oyo town, Ogbomoso, etc.)">Oyo State (Oyo town, Ogbomoso, etc.)</option>
+                <option value="Edo State (Benin City, etc.)">Edo State (Benin City, etc.)</option>
+                <option value="Abuja (FCT)">Abuja (FCT)</option>
+                <option value="Other States in Nigeria">Other States in Nigeria</option>
+                <option value="International / Diaspora">International / Diaspora</option>
+              </select>
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn btn-orange btn-submit-reg">
+            <span class="btn-text">Complete Registration</span>
+            <span class="spinner"></span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Digital Delegate Pass Card (Generated upon submission) -->
+      <div class="reg-success-box" id="regSuccessBox">
+        <div class="pass-ticket">
+          <div class="pass-head">
+            <div>
+              <span>Soul Winners Conference 2026</span>
+              <small style="display:block;font-size:.75rem;opacity:.9">Haven Word Church · The Spread City</small>
+            </div>
+            <div class="pass-code-pill" id="passCode">SWC-2026-7842</div>
+          </div>
+          <div class="pass-body">
+            <div class="pass-grid">
+              <div>
+                <div style="margin-bottom:8px">
+                  <span id="passType"
+                    style="display:inline-block;padding:4px 12px;border-radius:100px;background:rgba(255,90,0,.2);color:#ff9e66;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase">DELEGATE</span>
+                </div>
+                <h2 class="pass-name" id="passName">David Adeleke</h2>
+                <p style="font-size:.9rem;margin-bottom:14px">Official Delegate Badge · Admission Confirmed</p>
+
+                <div class="pass-meta">
+                  <div class="pm-item">
+                    <small>Email</small>
+                    <strong id="passEmail">david@example.com</strong>
+                  </div>
+                  <div class="pm-item">
+                    <small>Phone</small>
+                    <strong id="passPhone">08012345678</strong>
+                  </div>
+                  <div class="pm-item">
+                    <small>Delegation / City</small>
+                    <strong id="passFrom">Ibadan</strong>
+                  </div>
+                  <div class="pm-item">
+                    <small>Admission</small>
+                    <strong id="passAccom">Free · Confirmed</strong>
+                  </div>
+                  <div class="pm-item" style="grid-column:1/-1">
+                    <small>Conference Dates &amp; Venue</small>
+                    <strong>11th – 13th December 2026 · Haven Word Church, Opposite Gate 5, Adamasingba, Ibadan</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stylized QR Code Visual -->
+              <div class="pass-qr-wrap">
+                <svg viewBox="0 0 100 100" fill="#05060a" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Outer Corners -->
+                  <rect x="5" y="5" width="28" height="28" rx="4" fill="#ff5a00" />
+                  <rect x="9" y="9" width="20" height="20" rx="2" fill="#fff" />
+                  <rect x="13" y="13" width="12" height="12" fill="#05060a" />
+
+                  <rect x="67" y="5" width="28" height="28" rx="4" fill="#ff5a00" />
+                  <rect x="71" y="9" width="20" height="20" rx="2" fill="#fff" />
+                  <rect x="75" y="13" width="12" height="12" fill="#05060a" />
+
+                  <rect x="5" y="67" width="28" height="28" rx="4" fill="#ff5a00" />
+                  <rect x="9" y="71" width="20" height="20" rx="2" fill="#fff" />
+                  <rect x="13" y="75" width="12" height="12" fill="#05060a" />
+
+                  <!-- Matrix Dots -->
+                  <rect x="38" y="10" width="6" height="6" fill="#05060a" />
+                  <rect x="48" y="10" width="12" height="6" fill="#05060a" />
+                  <rect x="38" y="22" width="16" height="6" fill="#05060a" />
+                  <rect x="10" y="38" width="6" height="12" fill="#05060a" />
+                  <rect x="22" y="44" width="8" height="8" fill="#05060a" />
+                  <rect x="38" y="38" width="24" height="24" rx="4" fill="#ff5a00" />
+                  <rect x="44" y="44" width="12" height="12" fill="#fff" />
+                  <rect x="70" y="38" width="14" height="6" fill="#05060a" />
+                  <rect x="76" y="48" width="14" height="6" fill="#05060a" />
+                  <rect x="38" y="70" width="8" height="8" fill="#05060a" />
+                  <rect x="52" y="76" width="16" height="6" fill="#05060a" />
+                  <rect x="76" y="70" width="14" height="14" fill="#05060a" />
+                </svg>
+                <span style="font-size:.62rem;color:#05060a;font-weight:700;margin-top:4px;letter-spacing:.05em">SCAN AT
+                  ENTRANCE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pass-actions">
+          <button type="button" class="btn btn-orange" id="btnPrintPass">
+            <i class="fa-solid fa-print"></i> Print / Save Pass
+          </button>
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Soul+Winners+Conference+2026&dates=20261211T163000Z/20261213T130000Z&details=Soul+Winners+Conference+2026+at+Haven+Word+Church,+The+Spread+City.+Raising+ministers,+not+spectators.&location=Haven+Word+Church,+Opposite+Gate+5,+Adamasingba,+Ibadan"
+            target="_blank" rel="noopener" class="btn btn-ghost">
+            <i class="fa-solid fa-calendar-plus"></i> Add to Calendar
+          </a>
+          <button type="button" class="btn btn-ghost" id="btnResetReg">
+            <i class="fa-solid fa-user-plus"></i> Register Another Person
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ACCORDION ============ -->
+  <section class="conf-faq-sec" id="faq">
+    <div class="wrap">
+      <div class="sec-head" style="text-align:center;margin-bottom:10px">
+        <div>
+          <div class="eyebrow orange reveal">Got Questions?</div>
+          <h2 class="display reveal" style="font-size:clamp(2.4rem,6vw,4.2rem)">Frequently Asked Questions</h2>
+        </div>
+      </div>
+      <p class="reveal" style="text-align:center;max-width:540px;margin:0 auto">
+        Everything you need to know about attending Soul Winners Conference 2026.
+      </p>
+
+      <div class="faq-wrap reveal">
+        <div class="faq-card open">
+          <div class="faq-q">
+            <h4>Is Soul Winners Conference a paid event?</h4>
+            <span class="faq-ico"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-a">
+            No. Soul Winners Conference is 100% free to attend. Registration is compulsory to reserve your seat and
+            digital delegate pass.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-q">
+            <h4>Is feeding provided during the conference?</h4>
+            <span class="faq-ico"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-a">
+            Delegates handle their own meals. Numerous restaurants and quality food vendors operate right around
+            Adamasingba Stadium.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-q">
+            <h4>Can I invite friends, workers, or my whole ministry team?</h4>
+            <span class="faq-ico"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-a">
+            Yes! Cell groups, youth fellowships, and evangelism teams are welcome. Each delegate should register
+            individually for their pass.
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:50px" class="reveal">
+        <a href="#reg-form" class="btn btn-orange">
+          Register Now <svg class="sarrow" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+            <path d="M5 25 L25 5 H14 M25 5 V16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a href="index.html" class="logo">
+            <img src="assets/logo.svg" class="logo-img" alt="The Spread City" />
+          </a>
+          <p>Raising ministers, not spectators, carrying the fire of God from one life to another, one city at a time.
+          </p>
+          <div class="socials">
+            <a data-link="instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a data-link="youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a data-link="telegram" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a data-link="facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a data-link="tiktok" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="index.html#mission">About Us</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li><a href="giving.html">Giving</a></li>
+            <li><a href="soulwinnersconference">Conference</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Conference</h5>
+          <ul>
+            <li><a href="#top">Overview</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#reg-form">Registration</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Find Us</h5>
+          <ul>
+            <li><a data-link="map">Opposite Gate 5,</a></li>
+            <li><a data-link="map">Adamasingba, Ibadan,</a></li>
+            <li><a data-link="map">Oyo State, Nigeria</a></li>
+            <li><a data-link="directions">Get Directions <svg class="sarrow" viewBox="0 0 30 30" fill="none"
+                  aria-hidden="true">
+                  <path d="M5 25 L25 5 H14 M25 5 V16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 Haven Word Church, The Spread City. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+
+</html>
