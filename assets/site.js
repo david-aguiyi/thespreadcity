@@ -54,7 +54,7 @@ if (LINKS.phone) document.querySelectorAll('[data-tel]').forEach(el => el.setAtt
 document.querySelectorAll('[data-video]').forEach(el => {
   el.addEventListener('click', () => {
     if (LINKS.latestMessage) window.open(LINKS.latestMessage, '_blank', 'noopener');
-    else window.location.href = 'messages.html';
+    else window.location.href = 'messages';
   });
 });
 
