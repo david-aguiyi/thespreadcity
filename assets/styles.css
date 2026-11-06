@@ -268,7 +268,7 @@ footer .logo .logo-img{height:78px}
 
 /* ---------- Leadership ---------- */
 .leaders{padding:140px 0}
-.lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:60px}
+.lead-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,560px));gap:28px;margin-top:60px}
 .leader{border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#0a0c12}
 .leader .portrait{position:relative;height:340px;background:#080a12 center/cover no-repeat;overflow:hidden}
 .leader .portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,12,18,.9))}
