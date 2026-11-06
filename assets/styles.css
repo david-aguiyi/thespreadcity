@@ -266,20 +266,28 @@ footer .logo .logo-img{height:78px}
 .msg-card h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em;line-height:1;font-size:1.55rem;margin:8px 0 6px}
 .msg-card .sub{color:var(--grey);font-size:.9rem}
 
-/* ---------- Leadership ---------- */
-.leaders{padding:140px 0}
-.lead-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,560px));gap:28px;margin-top:60px}
-.leader{border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#0a0c12}
-.leader .portrait{position:relative;height:340px;background:#080a12 center/cover no-repeat;overflow:hidden}
-.leader .portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,12,18,.9))}
-.leader:hover .portrait{filter:brightness(1.08)}
-.leader .portrait.pa{background:#0a0c12 url('gallery/pastor-anthonia-cut.webp') center bottom/auto 94% no-repeat}
-.leader .portrait.pa::after{background:linear-gradient(180deg,rgba(10,12,18,0) 50%,rgba(10,12,18,.85) 82%,#0a0c12 100%)}
-.leader .portrait.pb{background-image:url('pastor-2.svg')}
-.leader .info{padding:24px 28px 28px}
-.leader .role{font-family:'Manrope',sans-serif;font-weight:600;letter-spacing:.16em;font-size:.72rem;text-transform:uppercase;color:var(--orange)}
-.leader h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em;line-height:1;font-size:2.2rem;margin:8px 0 12px}
-.leader p{color:var(--text-p);}
+/* ---------- Leadership Showcase ---------- */
+.leaders{padding:120px 0;background:#05060a;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.lead-feature{display:grid;grid-template-columns:1fr 1.15fr;align-items:center;gap:clamp(40px,6vw,80px)}
+.lead-photo-col{display:flex;justify-content:center;align-items:flex-end}
+.lead-photo-col .portrait-wrap{width:100%;max-width:480px;display:flex;justify-content:center;position:relative}
+.lead-photo-col .portrait-wrap::before{content:"";position:absolute;top:15%;width:300px;height:300px;background:radial-gradient(circle,rgba(255,255,255,.07) 0%,transparent 70%);pointer-events:none;z-index:0}
+.lead-hero-img{position:relative;z-index:1;width:100%;max-height:540px;object-fit:contain;filter:grayscale(100%) contrast(1.18) brightness(0.96);-webkit-mask-image:linear-gradient(180deg,#000 80%,transparent 100%);mask-image:linear-gradient(180deg,#000 80%,transparent 100%);transition:filter .4s ease,transform .4s ease}
+.lead-feature:hover .lead-hero-img{filter:grayscale(100%) contrast(1.24) brightness(1.02)}
+.lead-info-col{display:flex;flex-direction:column;align-items:flex-start;max-width:560px}
+.lead-brand-mark{margin-bottom:20px}
+.lead-brand-mark img{height:46px;width:auto;opacity:.95}
+.lead-eyebrow{font-family:'Manrope',sans-serif;font-weight:700;font-size:.92rem;letter-spacing:.22em;text-transform:uppercase;color:#ffffff;margin-bottom:12px}
+.lead-name{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1;color:#ffffff;margin:0 0 20px}
+.lead-bio{color:var(--text-p);font-size:1.05rem;line-height:1.8;margin:0 0 32px}
+.btn-pill-outline{display:inline-flex;align-items:center;justify-content:center;padding:13px 34px;border-radius:999px;border:1px solid rgba(255,255,255,.45);background:transparent;color:#ffffff;font-family:'Manrope',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;transition:all .25s ease}
+.btn-pill-outline:hover{border-color:#ffffff;background:rgba(255,255,255,.14);color:#ffffff;transform:translateY(-2px)}
+@media (max-width:900px){
+  .leaders{padding:70px 0}
+  .lead-feature{grid-template-columns:1fr;gap:40px}
+  .lead-photo-col img{max-height:400px}
+  .lead-info-col{max-width:100%}
+}
 
 /* ---------- Gallery / Life collage ---------- */
 .gallery{padding:110px 0 0;background:#05060a;overflow:hidden}
