@@ -275,8 +275,8 @@ document.querySelectorAll('[data-copy]').forEach(el => {
    SOUL WINNERS CONFERENCE 2026 — INTERACTIVE LOGIC
    ===================================================================== */
 (function initConference() {
-  // 1. Live Countdown Timer (Target: Dec 12, 2026 08:00:00 WAT)
-  const cdTarget = new Date('2026-12-12T08:00:00+01:00').getTime();
+  // 1. Live Countdown Timer (Target: Dec 17, 2026 08:00:00 WAT)
+  const cdTarget = new Date('2026-12-17T08:00:00+01:00').getTime();
   const dEl = document.getElementById('cdDays');
   const hEl = document.getElementById('cdHours');
   const mEl = document.getElementById('cdMins');
