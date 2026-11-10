@@ -438,7 +438,13 @@ footer a:hover{color:var(--orange)}
    SOUL WINNERS CONFERENCE 2026 — STYLES
    ===================================================================== */
 .conf-page-hero{
-  padding:170px 0 100px;
+  padding:clamp(80px,11vh,110px) 0 clamp(24px,3vh,36px);
+  min-height:100vh;
+  min-height:100svh;
+  max-height:960px;
+  display:flex;
+  align-items:center;
+  box-sizing:border-box;
   position:relative;
   overflow:hidden;
   background:#05060a;
@@ -448,26 +454,27 @@ footer a:hover{color:var(--orange)}
   display:grid;
   grid-template-columns:1.05fr 1fr;
   align-items:center;
-  gap:clamp(30px,4vw,56px);
-  max-width:1060px;
+  gap:clamp(24px,3.5vw,48px);
+  max-width:1080px;
+  width:100%;
   margin:0 auto;
 }
 .conf-hero-left{
   text-align:left;
-  max-width:560px;
+  max-width:540px;
 }
 .conf-hero-title{
-  font-size:clamp(2.4rem,5.2vw,4.8rem);
-  line-height:.92;
-  margin:0 0 16px;
+  font-size:clamp(2.2rem,4.4vw,4.2rem);
+  line-height:.93;
+  margin:0 0 12px;
   text-align:left;
 }
 .conf-hero-sub{
-  font-size:clamp(1rem,1.6vw,1.16rem);
+  font-size:clamp(0.95rem,1.4vw,1.08rem);
   color:var(--text-p);
-  max-width:480px;
-  margin:0 0 22px;
-  line-height:1.65;
+  max-width:460px;
+  margin:0 0 16px;
+  line-height:1.5;
   text-align:left;
 }
 .conf-meta-row{
@@ -476,7 +483,7 @@ footer a:hover{color:var(--orange)}
   align-items:center;
   flex-wrap:wrap;
   gap:16px;
-  margin-bottom:26px;
+  margin-bottom:18px;
   color:rgba(255,255,255,.9);
   font-size:.92rem;
 }
@@ -491,12 +498,12 @@ footer a:hover{color:var(--orange)}
   backdrop-filter:none;
   padding:0;
   max-width:460px;
-  margin:0 0 32px;
+  margin:0 0 24px;
 }
 .countdown-grid{
   display:flex;
   align-items:flex-start;
-  gap:clamp(20px,3.5vw,36px);
+  gap:clamp(18px,3vw,32px);
   flex-wrap:wrap;
 }
 .cd-item{
@@ -510,13 +517,13 @@ footer a:hover{color:var(--orange)}
 .cd-item:hover{border:none;transform:none}
 .cd-num{
   font-family:'Anton',sans-serif;
-  font-size:clamp(2.4rem,4.4vw,3.6rem);
+  font-size:clamp(2.2rem,3.8vw,3.2rem);
   line-height:.92;color:#fff;display:block;
 }
 .cd-item:nth-child(1) .cd-num{color:var(--orange)}
 .cd-unit{
   font-size:.65rem;font-weight:700;letter-spacing:.18em;
-  color:var(--grey);text-transform:uppercase;margin-top:6px;display:block;
+  color:var(--grey);text-transform:uppercase;margin-top:5px;display:block;
 }
 
 /* Right Column Slideshow with Centered Soft Edge Radial Vignette */
@@ -529,22 +536,23 @@ footer a:hover{color:var(--orange)}
 .conf-hero-slideshow{
   position:relative;
   width:100%;
-  max-width:460px;
-  aspect-ratio:4/4.8;
+  max-width:clamp(460px,42vw,540px);
+  max-height:clamp(380px,58vh,500px);
+  aspect-ratio:1/1.06;
   overflow:hidden;
   background:#05060a;
-  -webkit-mask-image:radial-gradient(ellipse 72% 72% at 50% 48%, #000 48%, rgba(0,0,0,.65) 75%, transparent 100%);
-  mask-image:radial-gradient(ellipse 72% 72% at 50% 48%, #000 48%, rgba(0,0,0,.65) 75%, transparent 100%);
+  -webkit-mask-image:radial-gradient(ellipse 68% 68% at 50% 50%, #000 24%, rgba(0,0,0,.85) 45%, rgba(0,0,0,.35) 68%, transparent 85%);
+  mask-image:radial-gradient(ellipse 68% 68% at 50% 50%, #000 24%, rgba(0,0,0,.85) 45%, rgba(0,0,0,.35) 68%, transparent 85%);
 }
 .conf-slide{
   position:absolute;
-  inset:-4%;
+  inset:-12%;
   background-size:cover;
   background-position:center 32%;
   opacity:0;
   transform:scale(1.0);
   filter:grayscale(100%) contrast(1.08) brightness(0.96);
-  transition:opacity 1.6s ease-in-out, transform 6.5s ease-out;
+  transition:opacity 2.5s ease-in-out, transform 9s ease-out;
   will-change:opacity, transform;
 }
 .conf-slide.active{
@@ -557,7 +565,7 @@ footer a:hover{color:var(--orange)}
   inset:0;
   z-index:2;
   pointer-events:none;
-  background:radial-gradient(ellipse 72% 72% at 50% 48%, transparent 48%, rgba(5,6,10,.35) 75%, #05060a 98%);
+  background:radial-gradient(ellipse 68% 68% at 50% 50%, transparent 26%, rgba(5,6,10,.3) 50%, rgba(5,6,10,.85) 72%, #05060a 90%);
 }
 
 /* Home Page Conference Promo Card */
@@ -775,9 +783,10 @@ select.form-control option{background:#0c0f18;color:#fff}
 .faq-card.open .faq-a{padding:0 26px 24px;max-height:300px}
 
 @media(max-width:960px){
-  .conf-hero-grid{grid-template-columns:1fr;gap:44px}
+  .conf-page-hero{min-height:auto;max-height:none;padding:120px 0 60px;display:block}
+  .conf-hero-grid{grid-template-columns:1fr;gap:40px}
   .conf-hero-left{max-width:100%}
-  .conf-hero-slideshow{max-width:440px;margin:0 auto}
+  .conf-hero-slideshow{max-width:440px;max-height:none;aspect-ratio:4/4.5;margin:0 auto}
   .conf-grid-2,.conf-promo-card{grid-template-columns:1fr;gap:36px}
   .session-card{grid-template-columns:1fr;gap:12px}
   .form-grid{grid-template-columns:1fr}

@@ -495,6 +495,6 @@ document.querySelectorAll('[data-copy]').forEach(el => {
         confSlides[currentSlide].classList.remove('active');
         currentSlide = (currentSlide + 1) % confSlides.length;
         confSlides[currentSlide].classList.add('active');
-      }, 5500);
+      }, 8000);
     }
   }) ();
