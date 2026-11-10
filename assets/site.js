@@ -486,4 +486,15 @@ document.querySelectorAll('[data-copy]').forEach(el => {
         });
       }
     });
+
+    // 8. Hero Zoom-in Crossfade Slideshow
+    const confSlides = document.querySelectorAll('.conf-slide');
+    if (confSlides.length > 1) {
+      let currentSlide = 0;
+      setInterval(() => {
+        confSlides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % confSlides.length;
+        confSlides[currentSlide].classList.add('active');
+      }, 5500);
+    }
   }) ();
