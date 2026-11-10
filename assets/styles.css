@@ -438,18 +438,79 @@ footer a:hover{color:var(--orange)}
    SOUL WINNERS CONFERENCE 2026 — STYLES
    ===================================================================== */
 .conf-page-hero{
-  padding:170px 0 90px;
+  padding:170px 0 100px;
   position:relative;
   overflow:hidden;
   background:#05060a;
   border-bottom:1px solid var(--line);
 }
+.conf-hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr 1fr;
+  align-items:center;
+  gap:clamp(36px,5vw,72px);
+}
+.conf-hero-left{
+  text-align:left;
+  max-width:620px;
+}
+.conf-hero-title{
+  font-size:clamp(2.4rem,5.6vw,5.2rem);
+  line-height:.92;
+  margin:0 0 18px;
+  text-align:left;
+}
+.conf-hero-sub{
+  font-size:clamp(1rem,1.8vw,1.18rem);
+  color:var(--text-p);
+  max-width:540px;
+  margin:0 0 24px;
+  line-height:1.7;
+  text-align:left;
+}
+.conf-meta-row{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+  margin-bottom:28px;
+  color:rgba(255,255,255,.9);
+  font-size:.95rem;
+}
+.conf-meta-item{display:flex;align-items:center;gap:8px}
+.conf-meta-item i{color:var(--orange)}
+
+/* Countdown Timer */
+.countdown-box{
+  background:rgba(10,12,18,.8);
+  border:1px solid rgba(255,90,0,.25);
+  box-shadow:0 12px 40px rgba(0,0,0,.6), 0 0 30px rgba(255,90,0,.08);
+  backdrop-filter:blur(16px);
+  border-radius:20px;
+  padding:18px 20px;
+  max-width:520px;
+  margin:0 0 32px;
+}
+.countdown-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+}
+
+/* Right Column Slideshow with Edge Radial Vignette */
+.conf-hero-right{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+}
 .conf-hero-slideshow{
-  position:absolute;
-  inset:0;
-  z-index:0;
+  position:relative;
+  width:100%;
+  max-width:480px;
+  aspect-ratio:4/4.8;
+  border-radius:28px;
   overflow:hidden;
-  pointer-events:none;
+  background:#05060a;
 }
 .conf-slide{
   position:absolute;
@@ -458,7 +519,7 @@ footer a:hover{color:var(--orange)}
   background-position:center 30%;
   opacity:0;
   transform:scale(1.0);
-  filter:grayscale(100%) contrast(1.12) brightness(0.70);
+  filter:grayscale(100%) contrast(1.15) brightness(0.85);
   transition:opacity 1.6s ease-in-out, transform 6.5s ease-out;
   will-change:opacity, transform;
 }
@@ -473,39 +534,9 @@ footer a:hover{color:var(--orange)}
   z-index:2;
   pointer-events:none;
   background:
-    radial-gradient(ellipse at center, rgba(5,6,10,.3) 0%, rgba(5,6,10,.7) 60%, #05060a 100%),
-    linear-gradient(180deg, #05060a 0%, rgba(5,6,10,.55) 15%, rgba(5,6,10,.35) 50%, rgba(5,6,10,.75) 80%, #05060a 100%),
-    linear-gradient(90deg, #05060a 0%, rgba(5,6,10,.45) 15%, transparent 35%, transparent 65%, rgba(5,6,10,.45) 85%, #05060a 100%);
-}
-.conf-hero-inner{text-align:center;max-width:880px;margin:0 auto}
-.conf-hero-title{
-  font-size:clamp(2.8rem,7.5vw,6.4rem);
-  line-height:.92;margin:10px 0 20px;
-}
-.conf-hero-sub{
-  font-size:clamp(1.05rem,2.2vw,1.35rem);
-  color:var(--text-p);max-width:640px;margin:0 auto 28px;
-}
-.conf-meta-row{
-  display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:24px;
-  margin-bottom:34px;color:rgba(255,255,255,.9);font-size:.95rem;
-}
-.conf-meta-item{display:flex;align-items:center;gap:8px}
-.conf-meta-item i{color:var(--orange)}
-
-/* Countdown Timer */
-.countdown-box{
-  background:rgba(10,12,18,.75);
-  border:1px solid rgba(255,90,0,.25);
-  box-shadow:0 12px 40px rgba(0,0,0,.6), 0 0 30px rgba(255,90,0,.08);
-  backdrop-filter:blur(16px);
-  border-radius:24px;
-  padding:20px;
-  max-width:620px;
-  margin:0 auto 36px;
-}
-.countdown-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+    radial-gradient(ellipse at center, transparent 30%, rgba(5,6,10,.55) 65%, #05060a 98%),
+    linear-gradient(180deg, #05060a 0%, rgba(5,6,10,0) 18%, rgba(5,6,10,0) 82%, #05060a 100%),
+    linear-gradient(90deg, #05060a 0%, rgba(5,6,10,0) 18%, rgba(5,6,10,0) 82%, #05060a 100%);
 }
 .cd-item{
   background:rgba(255,255,255,.03);
@@ -740,6 +771,9 @@ select.form-control option{background:#0c0f18;color:#fff}
 .faq-card.open .faq-a{padding:0 26px 24px;max-height:300px}
 
 @media(max-width:960px){
+  .conf-hero-grid{grid-template-columns:1fr;gap:44px}
+  .conf-hero-left{max-width:100%}
+  .conf-hero-slideshow{max-width:440px;margin:0 auto}
   .conf-grid-2,.conf-promo-card{grid-template-columns:1fr;gap:36px}
   .session-card{grid-template-columns:1fr;gap:12px}
   .form-grid{grid-template-columns:1fr}
