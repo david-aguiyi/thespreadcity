@@ -277,6 +277,7 @@ footer .logo .logo-img{height:78px}
 .lead-info-col{display:flex;flex-direction:column;align-items:flex-start;max-width:560px}
 .lead-eyebrow{font-family:'Manrope',sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue-glow);margin-bottom:14px}
 .lead-name{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1;color:#ffffff;margin:0 0 20px}
+.lead-name .owc{margin-right:clamp(6px,.6vw,12px)}
 .lead-bio{font-weight:400;font-size:1rem;line-height:1.7;color:var(--text-p);max-width:560px;margin:0 0 32px}
 .btn-pill-outline{display:inline-flex;align-items:center;justify-content:center;padding:13px 34px;border-radius:999px;border:1px solid rgba(255,255,255,.45);background:transparent;color:#ffffff;font-family:'Manrope',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;transition:all .25s ease}
 .btn-pill-outline:hover{border-color:#ffffff;background:rgba(255,255,255,.14);color:#ffffff;transform:translateY(-2px)}
@@ -309,7 +310,14 @@ footer .logo .logo-img{height:78px}
 .community{background:var(--orange);color:#fff;padding:130px 0;overflow:hidden}
 .community .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center}
 .community h2{font-size:clamp(2.4rem,6vw,5rem)}
-.community p{max-width:520px;margin:22px 0 32px;color:var(--text-p);}
+.community .owc::after,
+.owc.owc-dark::after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 130' preserveAspectRatio='none'%3E%3Cpath d='M42 66C26 32 118 14 176 18c82 6 128 30 114 62-12 30-150 42-224 32-40-6-58-30-24-52' fill='none' stroke='%2305060a' stroke-width='6.5' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.owc.owc-white::after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 130' preserveAspectRatio='none'%3E%3Cpath d='M42 66C26 32 118 14 176 18c82 6 128 30 114 62-12 30-150 42-224 32-40-6-58-30-24-52' fill='none' stroke='%23ffffff' stroke-width='6.5' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.community p{max-width:520px;margin:22px 0 32px;color:rgba(255,255,255,.95);font-size:1.02rem;line-height:1.65}
 .community .clock{font-family:'Anton',sans-serif;font-size:clamp(3.6rem,9vw,7.6rem);line-height:1;white-space:nowrap;text-align:right;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.9)}
 .community .clock small{display:block;font-family:'Manrope',sans-serif;font-size:.85rem;-webkit-text-stroke:0;color:#fff;letter-spacing:.16em;margin-top:12px;font-weight:600}
 
