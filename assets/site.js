@@ -28,7 +28,7 @@ const LINKS = {
 };
 
 // Real Google Maps directions to the church address (already wired — no edit needed)
-const CHURCH_ADDRESS = "Haven Word Church, Opposite Gate 5, Adamasingba, Ibadan, Oyo State, Nigeria";
+const CHURCH_ADDRESS = "The SpreadCity, Opposite Gate 5, Adamasingba, Ibadan, Oyo State, Nigeria";
 LINKS.directions = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(CHURCH_ADDRESS);
 LINKS.map = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(CHURCH_ADDRESS);
 
@@ -199,7 +199,7 @@ if (cf) cf.addEventListener('submit', (e) => {
 /* ---- Bank details & Copy to clipboard ---- */
 const BANK_DETAILS = {
   bank: "Wema Bank",
-  accountName: "Haven Word Church",
+  accountName: "The SpreadCity",
   accountNumber: "0275817169"
 };
 
