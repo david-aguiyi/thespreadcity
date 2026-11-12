@@ -443,11 +443,15 @@ footer .foot-contact a{overflow-wrap:anywhere}
   .foot-grid{grid-template-columns:1fr 1fr}
   .hero-content{flex-direction:column;align-items:flex-start;gap:30px}
   .hero-text{max-width:100%}
+  .gallery{padding:80px 0 0}
+  .gallery-grid{height:clamp(340px,56vw,560px);margin-top:36px}
 }
 @media(max-width:560px){
   .pillars,.foot-grid,.msg-cards,.ways-grid{grid-template-columns:1fr}
   .svc,.form{padding:30px}
   .way{padding:28px 22px}
+  .gallery{padding:64px 0 0}
+  .gallery-grid{height:clamp(260px,76vw,340px);margin-top:28px}
   .hero h1{letter-spacing:-.025em}
   .belief .wrap{padding-left:14px;padding-right:14px}   /* a little more room for the statement */
 }
