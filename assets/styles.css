@@ -340,7 +340,7 @@ footer .logo .logo-img{height:78px}
 .give-grid p{color:var(--text-p);margin-top:22px}
 .verse{border-left:3px solid var(--orange);padding:6px 0 6px 24px;margin-top:30px;font-size:1rem;line-height:1.7;color:#fff;font-style:italic}
 .give-ways{padding:40px 0 130px}
-.ways-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:20px}
+.ways-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:20px}
 .way{border-radius:20px;border:1px solid var(--line);background:#0a0c12;padding:36px;position:relative;overflow:hidden;display:flex;flex-direction:column}
 .way.feature{background:linear-gradient(160deg,#0a1c4d,#06102b);border-color:rgba(61,123,255,.4)}
 .way .ic{width:56px;height:56px;border-radius:14px;background:rgba(61,123,255,.16);display:grid;place-items:center;font-size:1.5rem;margin-bottom:20px}
