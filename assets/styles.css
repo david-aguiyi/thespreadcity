@@ -341,12 +341,19 @@ footer .logo .logo-img{height:78px}
 .verse{border-left:3px solid var(--orange);padding:6px 0 6px 24px;margin-top:30px;font-size:1rem;line-height:1.7;color:#fff;font-style:italic}
 .give-ways{padding:40px 0 130px}
 .ways-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:20px}
-.way{border-radius:20px;border:1px solid var(--line);background:#0a0c12;padding:36px;position:relative;overflow:hidden}
+.way{border-radius:20px;border:1px solid var(--line);background:#0a0c12;padding:36px;position:relative;overflow:hidden;display:flex;flex-direction:column}
 .way.feature{background:linear-gradient(160deg,#0a1c4d,#06102b);border-color:rgba(61,123,255,.4)}
 .way .ic{width:56px;height:56px;border-radius:14px;background:rgba(61,123,255,.16);display:grid;place-items:center;font-size:1.5rem;margin-bottom:20px}
 .way.feature .ic{background:var(--orange)}
 .way h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em;line-height:1;font-size:1.9rem;margin-bottom:12px}
-.way .rows{margin-top:16px}
+.give-grid .way p{margin-top:0;font-size:.96rem}
+.way .rows{margin-top:16px;margin-bottom:22px}
+.way .rows.mission-rows{margin-bottom:0}
+.way .rows.mission-rows .row{align-items:center}
+.way .rows.mission-rows .row b{white-space:nowrap;flex-shrink:0}
+.way-cta{margin-top:auto;width:100%;justify-content:center}
+.copy-card-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:auto}
+.copy-card-actions .copy-card-btn{width:100%;justify-content:center;padding:13px 10px;font-size:.72rem;letter-spacing:.08em;gap:6px}
 .way .row{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-top:1px solid var(--line);font-size:.95rem}
 .way .row span{color:var(--grey)}
 .way .row b{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.04em;font-size:1rem;text-align:right}
@@ -399,6 +406,8 @@ footer ul{list-style:none}
 footer li{margin-bottom:12px}
 footer a{color:rgba(255,255,255,.78);font-size:.95rem;transition:color .25s}
 footer a:hover{color:var(--orange)}
+footer .foot-subh{margin-top:24px;margin-bottom:14px}
+footer .foot-contact a{overflow-wrap:anywhere}
 .foot-brand p{color:var(--text-p);margin:18px 0;max-width:280px}
 .socials{display:flex;gap:12px}
 .socials a{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:.3s}
@@ -438,6 +447,7 @@ footer a:hover{color:var(--orange)}
 @media(max-width:560px){
   .pillars,.foot-grid,.msg-cards,.ways-grid{grid-template-columns:1fr}
   .svc,.form{padding:30px}
+  .way{padding:28px 22px}
   .hero h1{letter-spacing:-.025em}
   .belief .wrap{padding-left:14px;padding-right:14px}   /* a little more room for the statement */
 }

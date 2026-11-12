@@ -21,8 +21,8 @@ const LINKS = {
   tiktok: "https://www.tiktok.com/@spreadcitymoments",
   x: "",                        // TODO
   // Contact
-  email: "hello@thespreadcity.org", // TODO: your real church email
-  phone: "",                        // TODO: e.g. +234...
+  email: "thespreadcity1@gmail.com",
+  phone: "+234 81 6993 4313",
   // Soul Winners Conference Registration (Google Sheets Web App)
   conferenceRegEndpoint: "https://script.google.com/macros/s/AKfycbw6mxZq8BRTi6I89QCFnb3elDUmtM4uMd5WtFKPJ4Vzc7UxScg7jNM19HNWbglt2iRL_g/exec"
 };
@@ -197,11 +197,18 @@ if (cf) cf.addEventListener('submit', (e) => {
 });
 
 /* ---- Bank details & Copy to clipboard ---- */
-const BANK_DETAILS = {
-  bank: "Wema Bank",
-  accountName: "The SpreadCity",
-  accountNumber: "0275817169"
-};
+const BANK_DETAILS = [
+  {
+    bank: "Wema Bank",
+    accountName: "Haven Word Church",
+    accountNumber: "0275817169"
+  },
+  {
+    bank: "First Bank",
+    accountName: "Haven Word Church",
+    accountNumber: "2048801494"
+  }
+];
 
 function copyTextToClipboard(text, callback) {
   if (navigator.clipboard && window.isSecureContext) {
