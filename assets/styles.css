@@ -288,6 +288,118 @@ footer .logo .logo-img{height:78px}
   .lead-info-col{max-width:100%}
 }
 
+/* ---------- Branch Pastors Section ---------- */
+.branch-pastors{
+  padding:50px 0 70px;
+  background:#05070d;
+  border-top:1px solid var(--line);
+  position:relative;
+}
+.bp-header{
+  text-align:center;
+  margin-bottom:30px;
+}
+.bp-title{
+  font-family:'Anton',sans-serif;
+  font-size:clamp(1.8rem,3.8vw,2.8rem);
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  margin-top:8px;
+}
+.bp-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:clamp(12px,2.5vw,28px);
+}
+.bp-card{
+  background:rgba(255,255,255,.025);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:clamp(10px,1.6vw,18px);
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  transition:transform .25s ease, border-color .25s ease;
+}
+.bp-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(255,107,0,.45);
+}
+.bp-photo-wrap{
+  width:100%;
+  aspect-ratio:1/1.15;
+  border-radius:12px;
+  overflow:hidden;
+  position:relative;
+  background:#0a0c14;
+}
+.bp-photo{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+  transition:transform .4s ease;
+}
+.bp-card:hover .bp-photo{
+  transform:scale(1.03);
+}
+.bp-city-pill{
+  position:absolute;
+  bottom:8px;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(5,6,10,.85);
+  backdrop-filter:blur(8px);
+  border:1px solid rgba(255,107,0,.5);
+  color:var(--orange);
+  font-family:'Manrope',sans-serif;
+  font-weight:700;
+  font-size:clamp(0.6rem,1.8vw,0.72rem);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  padding:3px 10px;
+  border-radius:999px;
+  white-space:nowrap;
+  box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+.bp-info{
+  margin-top:12px;
+  width:100%;
+}
+.bp-name{
+  font-family:'Anton',sans-serif;
+  font-size:clamp(0.82rem,2vw,1.25rem);
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  line-height:1.15;
+  color:#fff;
+  margin:0 0 4px;
+  word-break:break-word;
+}
+.bp-role{
+  display:block;
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(0.62rem,1.5vw,0.8rem);
+  color:var(--grey);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+@media(max-width:560px){
+  .branch-pastors{padding:32px 0 40px}
+  .bp-header{margin-bottom:16px}
+  .bp-grid{gap:8px}
+  .bp-card{padding:6px;border-radius:10px}
+  .bp-photo-wrap{border-radius:8px;aspect-ratio:1/1.1}
+  .bp-city-pill{bottom:5px;padding:2px 7px;font-size:.58rem;letter-spacing:.08em}
+  .bp-info{margin-top:8px}
+  .bp-name{font-size:.76rem;line-height:1.1}
+  .bp-role{display:none}
+}
+
 /* ---------- Gallery / Life collage ---------- */
 .gallery{padding:110px 0 0;background:#05060a;overflow:hidden}
 .gallery .wrap .sec-head{margin-bottom:0}
