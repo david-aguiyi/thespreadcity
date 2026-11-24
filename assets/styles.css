@@ -355,12 +355,10 @@ footer .logo .logo-img{height:78px}
   z-index:2;
   width:100%;
   padding:20px 18px 18px;
-  text-align:left;
+  text-align:center;
 }
 .bp-city{
-  display:inline-flex;
-  align-items:center;
-  gap:5px;
+  display:block;
   font-family:'Manrope',sans-serif;
   font-weight:700;
   font-size:clamp(.56rem,1.4vw,.68rem);
@@ -368,14 +366,6 @@ footer .logo .logo-img{height:78px}
   text-transform:uppercase;
   color:var(--orange);
   margin-bottom:5px;
-}
-.bp-city::before{
-  content:"";
-  width:4px;
-  height:4px;
-  border-radius:50%;
-  background:var(--orange);
-  flex-shrink:0;
 }
 .bp-name{
   font-family:'Manrope',sans-serif;
@@ -396,7 +386,7 @@ footer .logo .logo-img{height:78px}
   .bp-grid{gap:8px}
   .bp-card{aspect-ratio:3/4.35;border-radius:12px}
   .bp-info{padding:10px 8px 9px}
-  .bp-city{font-size:.54rem;letter-spacing:.13em;gap:4px;margin-bottom:3px}
+  .bp-city{font-size:.54rem;letter-spacing:.13em;margin-bottom:3px}
   .bp-name{font-size:.7rem;line-height:1.2}
 }
 
